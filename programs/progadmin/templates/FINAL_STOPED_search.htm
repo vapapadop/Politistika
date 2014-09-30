@@ -1,0 +1,2141 @@
+<!doctype html><html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_search}
+<table class="runner-c runner-c-search" cellpadding="0" align=center>
+
+
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-srchheader {$brickclass_srchheader}">ΟΡΙΣΤΙΚΕΣ ΜΕ ΔΙΑΚΟΠΗ - Advanced search
+{$CrossElem}</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+
+
+{BEGIN conditions_block}
+<tr  class="runner-row style1 runner-b-srchconditions {$brickclass_srchconditions}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="runner-radio-button" name="srchType" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="runner-radio-button" name="srchType" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></td><td class="runner-cr"></td></tr>{END conditions_block}
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
+
+
+<tr class="runner-toprow header style2 runner-b-srchfields"><td class="runner-cl"><img src="images/spacer.gif"></td>
+	<td class="runner-cc">&nbsp;</td>
+	<td class="runner-cc">NOT</td>
+	<td class="runner-cc" colspan=3>&nbsp; </td>
+<td class="runner-cr"></td></tr>
+	{BEGIN submission_id_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_submission_id {$fielddispclass_submission_id}">
+				Αρ. Ηλ. Καταχώρησης
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_submission_id {$fielddispclass_submission_id}">
+			<input type="checkbox" {$submission_id_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_submission_id {$fielddispclass_submission_id}">
+			{$searchtype_submission_id}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_submission_id {$fielddispclass_submission_id}">
+			{$submission_id_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_submission_id {$fielddispclass_submission_id}">
+			{$submission_id_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END submission_id_fieldblock}
+	{BEGIN programa_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_programa {$fielddispclass_programa}">
+				Τύπος Προγράματος
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_programa {$fielddispclass_programa}">
+			<input type="checkbox" {$programa_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_programa {$fielddispclass_programa}">
+			{$searchtype_programa}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_programa {$fielddispclass_programa}">
+			{$programa_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_programa {$fielddispclass_programa}">
+			{$programa_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END programa_fieldblock}
+	{BEGIN date_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_date {$fielddispclass_date}">
+				Ημνια Πρωτλου Σχολείου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_date {$fielddispclass_date}">
+			<input type="checkbox" {$date_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_date {$fielddispclass_date}">
+			{$searchtype_date}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_date {$fielddispclass_date}">
+			{$date_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_date {$fielddispclass_date}">
+			{$date_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END date_fieldblock}
+	{BEGIN ar_protocol_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_ar_protocol {$fielddispclass_ar_protocol}">
+				Αρ. Πρωτλου Σχολείου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ar_protocol {$fielddispclass_ar_protocol}">
+			<input type="checkbox" {$ar_protocol_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ar_protocol {$fielddispclass_ar_protocol}">
+			{$searchtype_ar_protocol}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ar_protocol {$fielddispclass_ar_protocol}">
+			{$ar_protocol_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ar_protocol {$fielddispclass_ar_protocol}">
+			{$ar_protocol_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ar_protocol_fieldblock}
+	{BEGIN sxol_etos_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_sxol_etos {$fielddispclass_sxol_etos}">
+				Σχολ. Ετος
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_sxol_etos {$fielddispclass_sxol_etos}">
+			<input type="checkbox" {$sxol_etos_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_sxol_etos {$fielddispclass_sxol_etos}">
+			{$searchtype_sxol_etos}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_sxol_etos {$fielddispclass_sxol_etos}">
+			{$sxol_etos_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_sxol_etos {$fielddispclass_sxol_etos}">
+			{$sxol_etos_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END sxol_etos_fieldblock}
+	{BEGIN dide_name_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_dide_name {$fielddispclass_dide_name}">
+				ΔΔΕ Ονομα
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_dide_name {$fielddispclass_dide_name}">
+			<input type="checkbox" {$dide_name_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_dide_name {$fielddispclass_dide_name}">
+			{$searchtype_dide_name}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_dide_name {$fielddispclass_dide_name}">
+			{$dide_name_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_dide_name {$fielddispclass_dide_name}">
+			{$dide_name_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END dide_name_fieldblock}
+	{BEGIN sch_name_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_sch_name {$fielddispclass_sch_name}">
+				Σχολείο
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_sch_name {$fielddispclass_sch_name}">
+			<input type="checkbox" {$sch_name_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_sch_name {$fielddispclass_sch_name}">
+			{$searchtype_sch_name}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_sch_name {$fielddispclass_sch_name}">
+			{$sch_name_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_sch_name {$fielddispclass_sch_name}">
+			{$sch_name_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END sch_name_fieldblock}
+	{BEGIN tel_ergasias_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_tel_ergasias {$fielddispclass_tel_ergasias}">
+				Τηλ. Σχολείου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_tel_ergasias {$fielddispclass_tel_ergasias}">
+			<input type="checkbox" {$tel_ergasias_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_tel_ergasias {$fielddispclass_tel_ergasias}">
+			{$searchtype_tel_ergasias}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_tel_ergasias {$fielddispclass_tel_ergasias}">
+			{$tel_ergasias_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_tel_ergasias {$fielddispclass_tel_ergasias}">
+			{$tel_ergasias_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END tel_ergasias_fieldblock}
+	{BEGIN dimos_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_dimos {$fielddispclass_dimos}">
+				Δήμος Σχολείου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_dimos {$fielddispclass_dimos}">
+			<input type="checkbox" {$dimos_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_dimos {$fielddispclass_dimos}">
+			{$searchtype_dimos}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_dimos {$fielddispclass_dimos}">
+			{$dimos_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_dimos {$fielddispclass_dimos}">
+			{$dimos_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END dimos_fieldblock}
+	{BEGIN fax_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_fax {$fielddispclass_fax}">
+				Fax
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_fax {$fielddispclass_fax}">
+			<input type="checkbox" {$fax_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_fax {$fielddispclass_fax}">
+			{$searchtype_fax}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_fax {$fielddispclass_fax}">
+			{$fax_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_fax {$fielddispclass_fax}">
+			{$fax_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END fax_fieldblock}
+	{BEGIN e_mail_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_e_mail {$fielddispclass_e_mail}">
+				E Mail
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_e_mail {$fielddispclass_e_mail}">
+			<input type="checkbox" {$e_mail_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_e_mail {$fielddispclass_e_mail}">
+			{$searchtype_e_mail}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_e_mail {$fielddispclass_e_mail}">
+			{$e_mail_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_e_mail {$fielddispclass_e_mail}">
+			{$e_mail_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END e_mail_fieldblock}
+	{BEGIN sch_teachers_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_sch_teachers {$fielddispclass_sch_teachers}">
+				Αρ. Καθηγητών Σχολείου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_sch_teachers {$fielddispclass_sch_teachers}">
+			<input type="checkbox" {$sch_teachers_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_sch_teachers {$fielddispclass_sch_teachers}">
+			{$searchtype_sch_teachers}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_sch_teachers {$fielddispclass_sch_teachers}">
+			{$sch_teachers_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_sch_teachers {$fielddispclass_sch_teachers}">
+			{$sch_teachers_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END sch_teachers_fieldblock}
+	{BEGIN sch_students_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_sch_students {$fielddispclass_sch_students}">
+				Αρ. Μαθητών Σχολείου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_sch_students {$fielddispclass_sch_students}">
+			<input type="checkbox" {$sch_students_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_sch_students {$fielddispclass_sch_students}">
+			{$searchtype_sch_students}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_sch_students {$fielddispclass_sch_students}">
+			{$sch_students_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_sch_students {$fielddispclass_sch_students}">
+			{$sch_students_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END sch_students_fieldblock}
+	{BEGIN dieythintis_name_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_dieythintis_name {$fielddispclass_dieythintis_name}">
+				Ονομα Διευθυντή
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_dieythintis_name {$fielddispclass_dieythintis_name}">
+			<input type="checkbox" {$dieythintis_name_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_dieythintis_name {$fielddispclass_dieythintis_name}">
+			{$searchtype_dieythintis_name}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_dieythintis_name {$fielddispclass_dieythintis_name}">
+			{$dieythintis_name_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_dieythintis_name {$fielddispclass_dieythintis_name}">
+			{$dieythintis_name_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END dieythintis_name_fieldblock}
+	{BEGIN klados_dieythinti_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_klados_dieythinti {$fielddispclass_klados_dieythinti}">
+				Κλάδος Διευθυντή
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_klados_dieythinti {$fielddispclass_klados_dieythinti}">
+			<input type="checkbox" {$klados_dieythinti_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_klados_dieythinti {$fielddispclass_klados_dieythinti}">
+			{$searchtype_klados_dieythinti}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_klados_dieythinti {$fielddispclass_klados_dieythinti}">
+			{$klados_dieythinti_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_klados_dieythinti {$fielddispclass_klados_dieythinti}">
+			{$klados_dieythinti_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END klados_dieythinti_fieldblock}
+	{BEGIN program_title_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_program_title {$fielddispclass_program_title}">
+				Τίτλος Προγράμματος
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_program_title {$fielddispclass_program_title}">
+			<input type="checkbox" {$program_title_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_program_title {$fielddispclass_program_title}">
+			{$searchtype_program_title}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_program_title {$fielddispclass_program_title}">
+			{$program_title_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_program_title {$fielddispclass_program_title}">
+			{$program_title_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END program_title_fieldblock}
+	{BEGIN ar_praksis_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_ar_praksis {$fielddispclass_ar_praksis}">
+				Αρ. Πράξης Συλλόγου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ar_praksis {$fielddispclass_ar_praksis}">
+			<input type="checkbox" {$ar_praksis_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ar_praksis {$fielddispclass_ar_praksis}">
+			{$searchtype_ar_praksis}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ar_praksis {$fielddispclass_ar_praksis}">
+			{$ar_praksis_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ar_praksis {$fielddispclass_ar_praksis}">
+			{$ar_praksis_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ar_praksis_fieldblock}
+	{BEGIN date_praksis_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_date_praksis {$fielddispclass_date_praksis}">
+				Ημνια Πράξης Συλλόγου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_date_praksis {$fielddispclass_date_praksis}">
+			<input type="checkbox" {$date_praksis_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_date_praksis {$fielddispclass_date_praksis}">
+			{$searchtype_date_praksis}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_date_praksis {$fielddispclass_date_praksis}">
+			{$date_praksis_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_date_praksis {$fielddispclass_date_praksis}">
+			{$date_praksis_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END date_praksis_fieldblock}
+	{BEGIN sch_orario_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_sch_orario {$fielddispclass_sch_orario}">
+				Ωράριο Σχολείου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_sch_orario {$fielddispclass_sch_orario}">
+			<input type="checkbox" {$sch_orario_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_sch_orario {$fielddispclass_sch_orario}">
+			{$searchtype_sch_orario}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_sch_orario {$fielddispclass_sch_orario}">
+			{$sch_orario_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_sch_orario {$fielddispclass_sch_orario}">
+			{$sch_orario_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END sch_orario_fieldblock}
+	{BEGIN ypeythinos_name_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_ypeythinos_name {$fielddispclass_ypeythinos_name}">
+				Όνομα Υπευθύνου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypeythinos_name {$fielddispclass_ypeythinos_name}">
+			<input type="checkbox" {$ypeythinos_name_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypeythinos_name {$fielddispclass_ypeythinos_name}">
+			{$searchtype_ypeythinos_name}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypeythinos_name {$fielddispclass_ypeythinos_name}">
+			{$ypeythinos_name_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypeythinos_name {$fielddispclass_ypeythinos_name}">
+			{$ypeythinos_name_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypeythinos_name_fieldblock}
+	{BEGIN ypeythinos_amm_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_ypeythinos_amm {$fielddispclass_ypeythinos_amm}">
+				ΑΦΜ Υπευθύνου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypeythinos_amm {$fielddispclass_ypeythinos_amm}">
+			<input type="checkbox" {$ypeythinos_amm_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypeythinos_amm {$fielddispclass_ypeythinos_amm}">
+			{$searchtype_ypeythinos_amm}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypeythinos_amm {$fielddispclass_ypeythinos_amm}">
+			{$ypeythinos_amm_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypeythinos_amm {$fielddispclass_ypeythinos_amm}">
+			{$ypeythinos_amm_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypeythinos_amm_fieldblock}
+	{BEGIN ypeythinos_klados_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_ypeythinos_klados {$fielddispclass_ypeythinos_klados}">
+				Κλάδος Υπευθύνου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypeythinos_klados {$fielddispclass_ypeythinos_klados}">
+			<input type="checkbox" {$ypeythinos_klados_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypeythinos_klados {$fielddispclass_ypeythinos_klados}">
+			{$searchtype_ypeythinos_klados}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypeythinos_klados {$fielddispclass_ypeythinos_klados}">
+			{$ypeythinos_klados_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypeythinos_klados {$fielddispclass_ypeythinos_klados}">
+			{$ypeythinos_klados_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypeythinos_klados_fieldblock}
+	{BEGIN ypeythinos_wres_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_ypeythinos_wres {$fielddispclass_ypeythinos_wres}">
+				Ώρες Υπευθύνου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypeythinos_wres {$fielddispclass_ypeythinos_wres}">
+			<input type="checkbox" {$ypeythinos_wres_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypeythinos_wres {$fielddispclass_ypeythinos_wres}">
+			{$searchtype_ypeythinos_wres}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypeythinos_wres {$fielddispclass_ypeythinos_wres}">
+			{$ypeythinos_wres_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypeythinos_wres {$fielddispclass_ypeythinos_wres}">
+			{$ypeythinos_wres_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypeythinos_wres_fieldblock}
+	{BEGIN ypeythinos_again_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_ypeythinos_again {$fielddispclass_ypeythinos_again}">
+				Υπεύθυνος ξανά
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypeythinos_again {$fielddispclass_ypeythinos_again}">
+			<input type="checkbox" {$ypeythinos_again_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypeythinos_again {$fielddispclass_ypeythinos_again}">
+			{$searchtype_ypeythinos_again}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypeythinos_again {$fielddispclass_ypeythinos_again}">
+			{$ypeythinos_again_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypeythinos_again {$fielddispclass_ypeythinos_again}">
+			{$ypeythinos_again_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypeythinos_again_fieldblock}
+	{BEGIN ypeythinos_epimorfosi_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_ypeythinos_epimorfosi {$fielddispclass_ypeythinos_epimorfosi}">
+				Επιμόρφωση Υπευθύνου
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypeythinos_epimorfosi {$fielddispclass_ypeythinos_epimorfosi}">
+			<input type="checkbox" {$ypeythinos_epimorfosi_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypeythinos_epimorfosi {$fielddispclass_ypeythinos_epimorfosi}">
+			{$searchtype_ypeythinos_epimorfosi}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypeythinos_epimorfosi {$fielddispclass_ypeythinos_epimorfosi}">
+			{$ypeythinos_epimorfosi_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypeythinos_epimorfosi {$fielddispclass_ypeythinos_epimorfosi}">
+			{$ypeythinos_epimorfosi_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypeythinos_epimorfosi_fieldblock}
+	{BEGIN symetexwn1_name_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn1_name {$fielddispclass_symetexwn1_name}">
+				Όνομα Συμμετέχων1
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn1_name {$fielddispclass_symetexwn1_name}">
+			<input type="checkbox" {$symetexwn1_name_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn1_name {$fielddispclass_symetexwn1_name}">
+			{$searchtype_symetexwn1_name}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn1_name {$fielddispclass_symetexwn1_name}">
+			{$symetexwn1_name_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn1_name {$fielddispclass_symetexwn1_name}">
+			{$symetexwn1_name_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn1_name_fieldblock}
+	{BEGIN symetexwn1_amm_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn1_amm {$fielddispclass_symetexwn1_amm}">
+				ΑΦΜ Συμμετέχων1
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn1_amm {$fielddispclass_symetexwn1_amm}">
+			<input type="checkbox" {$symetexwn1_amm_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn1_amm {$fielddispclass_symetexwn1_amm}">
+			{$searchtype_symetexwn1_amm}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn1_amm {$fielddispclass_symetexwn1_amm}">
+			{$symetexwn1_amm_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn1_amm {$fielddispclass_symetexwn1_amm}">
+			{$symetexwn1_amm_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn1_amm_fieldblock}
+	{BEGIN symetexwn1_klados_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn1_klados {$fielddispclass_symetexwn1_klados}">
+				Κλάδος Συμμετέχων1
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn1_klados {$fielddispclass_symetexwn1_klados}">
+			<input type="checkbox" {$symetexwn1_klados_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn1_klados {$fielddispclass_symetexwn1_klados}">
+			{$searchtype_symetexwn1_klados}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn1_klados {$fielddispclass_symetexwn1_klados}">
+			{$symetexwn1_klados_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn1_klados {$fielddispclass_symetexwn1_klados}">
+			{$symetexwn1_klados_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn1_klados_fieldblock}
+	{BEGIN symetexwn1_wres_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn1_wres {$fielddispclass_symetexwn1_wres}">
+				Ώρες Συμμετέχων1
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn1_wres {$fielddispclass_symetexwn1_wres}">
+			<input type="checkbox" {$symetexwn1_wres_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn1_wres {$fielddispclass_symetexwn1_wres}">
+			{$searchtype_symetexwn1_wres}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn1_wres {$fielddispclass_symetexwn1_wres}">
+			{$symetexwn1_wres_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn1_wres {$fielddispclass_symetexwn1_wres}">
+			{$symetexwn1_wres_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn1_wres_fieldblock}
+	{BEGIN symetexwn1_again_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn1_again {$fielddispclass_symetexwn1_again}">
+				Συμμετέχων1 ξανά
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn1_again {$fielddispclass_symetexwn1_again}">
+			<input type="checkbox" {$symetexwn1_again_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn1_again {$fielddispclass_symetexwn1_again}">
+			{$searchtype_symetexwn1_again}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn1_again {$fielddispclass_symetexwn1_again}">
+			{$symetexwn1_again_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn1_again {$fielddispclass_symetexwn1_again}">
+			{$symetexwn1_again_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn1_again_fieldblock}
+	{BEGIN symetexwn1_epimorfosi_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn1_epimorfosi {$fielddispclass_symetexwn1_epimorfosi}">
+				Επιμόρφωση Συμμετέχων1
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn1_epimorfosi {$fielddispclass_symetexwn1_epimorfosi}">
+			<input type="checkbox" {$symetexwn1_epimorfosi_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn1_epimorfosi {$fielddispclass_symetexwn1_epimorfosi}">
+			{$searchtype_symetexwn1_epimorfosi}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn1_epimorfosi {$fielddispclass_symetexwn1_epimorfosi}">
+			{$symetexwn1_epimorfosi_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn1_epimorfosi {$fielddispclass_symetexwn1_epimorfosi}">
+			{$symetexwn1_epimorfosi_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn1_epimorfosi_fieldblock}
+	{BEGIN symetexwn2_name_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn2_name {$fielddispclass_symetexwn2_name}">
+				Όνομα Συμμετέχων2
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn2_name {$fielddispclass_symetexwn2_name}">
+			<input type="checkbox" {$symetexwn2_name_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn2_name {$fielddispclass_symetexwn2_name}">
+			{$searchtype_symetexwn2_name}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn2_name {$fielddispclass_symetexwn2_name}">
+			{$symetexwn2_name_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn2_name {$fielddispclass_symetexwn2_name}">
+			{$symetexwn2_name_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn2_name_fieldblock}
+	{BEGIN symetexwn2_amm_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn2_amm {$fielddispclass_symetexwn2_amm}">
+				ΑΦΜ Συμμετέχων2
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn2_amm {$fielddispclass_symetexwn2_amm}">
+			<input type="checkbox" {$symetexwn2_amm_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn2_amm {$fielddispclass_symetexwn2_amm}">
+			{$searchtype_symetexwn2_amm}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn2_amm {$fielddispclass_symetexwn2_amm}">
+			{$symetexwn2_amm_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn2_amm {$fielddispclass_symetexwn2_amm}">
+			{$symetexwn2_amm_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn2_amm_fieldblock}
+	{BEGIN symetexwn2_klados_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn2_klados {$fielddispclass_symetexwn2_klados}">
+				Κλάδος Συμμετέχων2
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn2_klados {$fielddispclass_symetexwn2_klados}">
+			<input type="checkbox" {$symetexwn2_klados_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn2_klados {$fielddispclass_symetexwn2_klados}">
+			{$searchtype_symetexwn2_klados}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn2_klados {$fielddispclass_symetexwn2_klados}">
+			{$symetexwn2_klados_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn2_klados {$fielddispclass_symetexwn2_klados}">
+			{$symetexwn2_klados_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn2_klados_fieldblock}
+	{BEGIN symetexwn2_wres_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn2_wres {$fielddispclass_symetexwn2_wres}">
+				Ώρες Συμμετέχων2
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn2_wres {$fielddispclass_symetexwn2_wres}">
+			<input type="checkbox" {$symetexwn2_wres_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn2_wres {$fielddispclass_symetexwn2_wres}">
+			{$searchtype_symetexwn2_wres}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn2_wres {$fielddispclass_symetexwn2_wres}">
+			{$symetexwn2_wres_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn2_wres {$fielddispclass_symetexwn2_wres}">
+			{$symetexwn2_wres_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn2_wres_fieldblock}
+	{BEGIN symetexwn2_again_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn2_again {$fielddispclass_symetexwn2_again}">
+				Συμμετέχων2 ξανά
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn2_again {$fielddispclass_symetexwn2_again}">
+			<input type="checkbox" {$symetexwn2_again_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn2_again {$fielddispclass_symetexwn2_again}">
+			{$searchtype_symetexwn2_again}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn2_again {$fielddispclass_symetexwn2_again}">
+			{$symetexwn2_again_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn2_again {$fielddispclass_symetexwn2_again}">
+			{$symetexwn2_again_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn2_again_fieldblock}
+	{BEGIN symetexwn2_epimorfosi_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn2_epimorfosi {$fielddispclass_symetexwn2_epimorfosi}">
+				Επιμόρφωση Συμμετέχων2
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn2_epimorfosi {$fielddispclass_symetexwn2_epimorfosi}">
+			<input type="checkbox" {$symetexwn2_epimorfosi_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn2_epimorfosi {$fielddispclass_symetexwn2_epimorfosi}">
+			{$searchtype_symetexwn2_epimorfosi}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn2_epimorfosi {$fielddispclass_symetexwn2_epimorfosi}">
+			{$symetexwn2_epimorfosi_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn2_epimorfosi {$fielddispclass_symetexwn2_epimorfosi}">
+			{$symetexwn2_epimorfosi_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn2_epimorfosi_fieldblock}
+	{BEGIN symetexwn3_name_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn3_name {$fielddispclass_symetexwn3_name}">
+				Όνομα Συμμετέχων3
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn3_name {$fielddispclass_symetexwn3_name}">
+			<input type="checkbox" {$symetexwn3_name_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn3_name {$fielddispclass_symetexwn3_name}">
+			{$searchtype_symetexwn3_name}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn3_name {$fielddispclass_symetexwn3_name}">
+			{$symetexwn3_name_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn3_name {$fielddispclass_symetexwn3_name}">
+			{$symetexwn3_name_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn3_name_fieldblock}
+	{BEGIN symetexwn3_amm_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn3_amm {$fielddispclass_symetexwn3_amm}">
+				ΑΦΜ Συμμετέχων3
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn3_amm {$fielddispclass_symetexwn3_amm}">
+			<input type="checkbox" {$symetexwn3_amm_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn3_amm {$fielddispclass_symetexwn3_amm}">
+			{$searchtype_symetexwn3_amm}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn3_amm {$fielddispclass_symetexwn3_amm}">
+			{$symetexwn3_amm_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn3_amm {$fielddispclass_symetexwn3_amm}">
+			{$symetexwn3_amm_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn3_amm_fieldblock}
+	{BEGIN symetexwn3_klados_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn3_klados {$fielddispclass_symetexwn3_klados}">
+				Κλάδος Συμμετέχων3
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn3_klados {$fielddispclass_symetexwn3_klados}">
+			<input type="checkbox" {$symetexwn3_klados_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn3_klados {$fielddispclass_symetexwn3_klados}">
+			{$searchtype_symetexwn3_klados}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn3_klados {$fielddispclass_symetexwn3_klados}">
+			{$symetexwn3_klados_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn3_klados {$fielddispclass_symetexwn3_klados}">
+			{$symetexwn3_klados_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn3_klados_fieldblock}
+	{BEGIN symetexwn3_wres_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn3_wres {$fielddispclass_symetexwn3_wres}">
+				Ώρες Συμμετέχων3
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn3_wres {$fielddispclass_symetexwn3_wres}">
+			<input type="checkbox" {$symetexwn3_wres_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn3_wres {$fielddispclass_symetexwn3_wres}">
+			{$searchtype_symetexwn3_wres}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn3_wres {$fielddispclass_symetexwn3_wres}">
+			{$symetexwn3_wres_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn3_wres {$fielddispclass_symetexwn3_wres}">
+			{$symetexwn3_wres_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn3_wres_fieldblock}
+	{BEGIN symetexwn3_again_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn3_again {$fielddispclass_symetexwn3_again}">
+				Συμμετέχων3 ξανά
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn3_again {$fielddispclass_symetexwn3_again}">
+			<input type="checkbox" {$symetexwn3_again_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn3_again {$fielddispclass_symetexwn3_again}">
+			{$searchtype_symetexwn3_again}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn3_again {$fielddispclass_symetexwn3_again}">
+			{$symetexwn3_again_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn3_again {$fielddispclass_symetexwn3_again}">
+			{$symetexwn3_again_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn3_again_fieldblock}
+	{BEGIN symetexwn3_epimorfosi_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_symetexwn3_epimorfosi {$fielddispclass_symetexwn3_epimorfosi}">
+				Επιμόρφωση Συμμετέχων3
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn3_epimorfosi {$fielddispclass_symetexwn3_epimorfosi}">
+			<input type="checkbox" {$symetexwn3_epimorfosi_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_symetexwn3_epimorfosi {$fielddispclass_symetexwn3_epimorfosi}">
+			{$searchtype_symetexwn3_epimorfosi}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn3_epimorfosi {$fielddispclass_symetexwn3_epimorfosi}">
+			{$symetexwn3_epimorfosi_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_symetexwn3_epimorfosi {$fielddispclass_symetexwn3_epimorfosi}">
+			{$symetexwn3_epimorfosi_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn3_epimorfosi_fieldblock}
+	{BEGIN mathites_synolo_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_mathites_synolo {$fielddispclass_mathites_synolo}">
+				Σύνολο Μαθητές Ομάδας
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_mathites_synolo {$fielddispclass_mathites_synolo}">
+			<input type="checkbox" {$mathites_synolo_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_mathites_synolo {$fielddispclass_mathites_synolo}">
+			{$searchtype_mathites_synolo}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_mathites_synolo {$fielddispclass_mathites_synolo}">
+			{$mathites_synolo_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_mathites_synolo {$fielddispclass_mathites_synolo}">
+			{$mathites_synolo_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END mathites_synolo_fieldblock}
+	{BEGIN agoria_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_agoria {$fielddispclass_agoria}">
+				Αγόρια
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_agoria {$fielddispclass_agoria}">
+			<input type="checkbox" {$agoria_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_agoria {$fielddispclass_agoria}">
+			{$searchtype_agoria}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_agoria {$fielddispclass_agoria}">
+			{$agoria_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_agoria {$fielddispclass_agoria}">
+			{$agoria_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END agoria_fieldblock}
+	{BEGIN koritsia_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_koritsia {$fielddispclass_koritsia}">
+				Κορίτσια
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_koritsia {$fielddispclass_koritsia}">
+			<input type="checkbox" {$koritsia_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_koritsia {$fielddispclass_koritsia}">
+			{$searchtype_koritsia}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_koritsia {$fielddispclass_koritsia}">
+			{$koritsia_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_koritsia {$fielddispclass_koritsia}">
+			{$koritsia_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END koritsia_fieldblock}
+	{BEGIN amiges_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_amiges {$fielddispclass_amiges}">
+				Σύνθεση Ομάδας
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_amiges {$fielddispclass_amiges}">
+			<input type="checkbox" {$amiges_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_amiges {$fielddispclass_amiges}">
+			{$searchtype_amiges}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_amiges {$fielddispclass_amiges}">
+			{$amiges_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_amiges {$fielddispclass_amiges}">
+			{$amiges_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END amiges_fieldblock}
+	{BEGIN meet_day_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_meet_day {$fielddispclass_meet_day}">
+				Ημέρα/ες Συνάντησης
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_meet_day {$fielddispclass_meet_day}">
+			<input type="checkbox" {$meet_day_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_meet_day {$fielddispclass_meet_day}">
+			{$searchtype_meet_day}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_meet_day {$fielddispclass_meet_day}">
+			{$meet_day_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_meet_day {$fielddispclass_meet_day}">
+			{$meet_day_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END meet_day_fieldblock}
+	{BEGIN meet_hour_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_meet_hour {$fielddispclass_meet_hour}">
+				Ώρα/ες Συνάντησης
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_meet_hour {$fielddispclass_meet_hour}">
+			<input type="checkbox" {$meet_hour_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_meet_hour {$fielddispclass_meet_hour}">
+			{$searchtype_meet_hour}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_meet_hour {$fielddispclass_meet_hour}">
+			{$meet_hour_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_meet_hour {$fielddispclass_meet_hour}">
+			{$meet_hour_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END meet_hour_fieldblock}
+	{BEGIN meet_place_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_meet_place {$fielddispclass_meet_place}">
+				Τόπος Συνάντησης
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_meet_place {$fielddispclass_meet_place}">
+			<input type="checkbox" {$meet_place_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_meet_place {$fielddispclass_meet_place}">
+			{$searchtype_meet_place}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_meet_place {$fielddispclass_meet_place}">
+			{$meet_place_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_meet_place {$fielddispclass_meet_place}">
+			{$meet_place_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END meet_place_fieldblock}
+	{BEGIN arxeio_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_arxeio {$fielddispclass_arxeio}">
+				Υπάρχει Αρχείο 
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_arxeio {$fielddispclass_arxeio}">
+			<input type="checkbox" {$arxeio_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_arxeio {$fielddispclass_arxeio}">
+			{$searchtype_arxeio}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_arxeio {$fielddispclass_arxeio}">
+			{$arxeio_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_arxeio {$fielddispclass_arxeio}">
+			{$arxeio_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END arxeio_fieldblock}
+	{BEGIN ypothemata_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_ypothemata {$fielddispclass_ypothemata}">
+				Υποθέματα
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypothemata {$fielddispclass_ypothemata}">
+			<input type="checkbox" {$ypothemata_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ypothemata {$fielddispclass_ypothemata}">
+			{$searchtype_ypothemata}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypothemata {$fielddispclass_ypothemata}">
+			{$ypothemata_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ypothemata {$fielddispclass_ypothemata}">
+			{$ypothemata_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypothemata_fieldblock}
+	{BEGIN stoxoi_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_stoxoi {$fielddispclass_stoxoi}">
+				Στόχοι
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_stoxoi {$fielddispclass_stoxoi}">
+			<input type="checkbox" {$stoxoi_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_stoxoi {$fielddispclass_stoxoi}">
+			{$searchtype_stoxoi}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_stoxoi {$fielddispclass_stoxoi}">
+			{$stoxoi_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_stoxoi {$fielddispclass_stoxoi}">
+			{$stoxoi_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END stoxoi_fieldblock}
+	{BEGIN methodologia_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_methodologia {$fielddispclass_methodologia}">
+				Μεθοδολογία
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_methodologia {$fielddispclass_methodologia}">
+			<input type="checkbox" {$methodologia_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_methodologia {$fielddispclass_methodologia}">
+			{$searchtype_methodologia}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_methodologia {$fielddispclass_methodologia}">
+			{$methodologia_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_methodologia {$fielddispclass_methodologia}">
+			{$methodologia_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END methodologia_fieldblock}
+	{BEGIN syndeseis_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_syndeseis {$fielddispclass_syndeseis}">
+				Συνδέσεις
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_syndeseis {$fielddispclass_syndeseis}">
+			<input type="checkbox" {$syndeseis_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_syndeseis {$fielddispclass_syndeseis}">
+			{$searchtype_syndeseis}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_syndeseis {$fielddispclass_syndeseis}">
+			{$syndeseis_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_syndeseis {$fielddispclass_syndeseis}">
+			{$syndeseis_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END syndeseis_fieldblock}
+	{BEGIN month1_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_month1 {$fielddispclass_month1}">
+				Μήνας 1
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_month1 {$fielddispclass_month1}">
+			<input type="checkbox" {$month1_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_month1 {$fielddispclass_month1}">
+			{$searchtype_month1}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_month1 {$fielddispclass_month1}">
+			{$month1_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_month1 {$fielddispclass_month1}">
+			{$month1_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END month1_fieldblock}
+	{BEGIN month2_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_month2 {$fielddispclass_month2}">
+				Μήνας 2
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_month2 {$fielddispclass_month2}">
+			<input type="checkbox" {$month2_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_month2 {$fielddispclass_month2}">
+			{$searchtype_month2}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_month2 {$fielddispclass_month2}">
+			{$month2_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_month2 {$fielddispclass_month2}">
+			{$month2_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END month2_fieldblock}
+	{BEGIN month3_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_month3 {$fielddispclass_month3}">
+				Μήνας 3
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_month3 {$fielddispclass_month3}">
+			<input type="checkbox" {$month3_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_month3 {$fielddispclass_month3}">
+			{$searchtype_month3}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_month3 {$fielddispclass_month3}">
+			{$month3_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_month3 {$fielddispclass_month3}">
+			{$month3_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END month3_fieldblock}
+	{BEGIN month4_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_month4 {$fielddispclass_month4}">
+				Μήνας 4
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_month4 {$fielddispclass_month4}">
+			<input type="checkbox" {$month4_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_month4 {$fielddispclass_month4}">
+			{$searchtype_month4}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_month4 {$fielddispclass_month4}">
+			{$month4_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_month4 {$fielddispclass_month4}">
+			{$month4_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END month4_fieldblock}
+	{BEGIN month5_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_month5 {$fielddispclass_month5}">
+				Μήνας 5
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_month5 {$fielddispclass_month5}">
+			<input type="checkbox" {$month5_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_month5 {$fielddispclass_month5}">
+			{$searchtype_month5}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_month5 {$fielddispclass_month5}">
+			{$month5_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_month5 {$fielddispclass_month5}">
+			{$month5_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END month5_fieldblock}
+	{BEGIN episkepseis_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_episkepseis {$fielddispclass_episkepseis}">
+				Αρ. Επισκέψεων
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_episkepseis {$fielddispclass_episkepseis}">
+			<input type="checkbox" {$episkepseis_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_episkepseis {$fielddispclass_episkepseis}">
+			{$searchtype_episkepseis}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_episkepseis {$fielddispclass_episkepseis}">
+			{$episkepseis_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_episkepseis {$fielddispclass_episkepseis}">
+			{$episkepseis_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END episkepseis_fieldblock}
+	{BEGIN submission_date_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_submission_date {$fielddispclass_submission_date}">
+				Ημερομηνία Υποβολής Αιτησης
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_submission_date {$fielddispclass_submission_date}">
+			<input type="checkbox" {$submission_date_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_submission_date {$fielddispclass_submission_date}">
+			{$searchtype_submission_date}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_submission_date {$fielddispclass_submission_date}">
+			{$submission_date_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_submission_date {$fielddispclass_submission_date}">
+			{$submission_date_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END submission_date_fieldblock}
+	{BEGIN last_modified_date_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_last_modified_date {$fielddispclass_last_modified_date}">
+				Last Modified Date
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_last_modified_date {$fielddispclass_last_modified_date}">
+			<input type="checkbox" {$last_modified_date_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_last_modified_date {$fielddispclass_last_modified_date}">
+			{$searchtype_last_modified_date}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_last_modified_date {$fielddispclass_last_modified_date}">
+			{$last_modified_date_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_last_modified_date {$fielddispclass_last_modified_date}">
+			{$last_modified_date_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END last_modified_date_fieldblock}
+	{BEGIN ip_address_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_ip_address {$fielddispclass_ip_address}">
+				Ip Address
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ip_address {$fielddispclass_ip_address}">
+			<input type="checkbox" {$ip_address_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_ip_address {$fielddispclass_ip_address}">
+			{$searchtype_ip_address}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ip_address {$fielddispclass_ip_address}">
+			{$ip_address_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_ip_address {$fielddispclass_ip_address}">
+			{$ip_address_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ip_address_fieldblock}
+	{BEGIN is_finalized_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_is_finalized {$fielddispclass_is_finalized}">
+				Διακοπή Προγράμματος
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_is_finalized {$fielddispclass_is_finalized}">
+			<input type="checkbox" {$is_finalized_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_is_finalized {$fielddispclass_is_finalized}">
+			{$searchtype_is_finalized}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_is_finalized {$fielddispclass_is_finalized}">
+			{$is_finalized_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_is_finalized {$fielddispclass_is_finalized}">
+			{$is_finalized_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END is_finalized_fieldblock}
+	{BEGIN sch_id_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_sch_id {$fielddispclass_sch_id}">
+				sch_id
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_sch_id {$fielddispclass_sch_id}">
+			<input type="checkbox" {$sch_id_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_sch_id {$fielddispclass_sch_id}">
+			{$searchtype_sch_id}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_sch_id {$fielddispclass_sch_id}">
+			{$sch_id_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_sch_id {$fielddispclass_sch_id}">
+			{$sch_id_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END sch_id_fieldblock}
+	{BEGIN submited_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_submited {$fielddispclass_submited}">
+				Submited
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_submited {$fielddispclass_submited}">
+			<input type="checkbox" {$submited_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_submited {$fielddispclass_submited}">
+			{$searchtype_submited}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_submited {$fielddispclass_submited}">
+			{$submited_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_submited {$fielddispclass_submited}">
+			{$submited_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END submited_fieldblock}
+
+
+
+<tr class="{$cfooterclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc alt"></td><td class="runner-cc alt"></td><td class="runner-cc alt"></td><td class="runner-cc alt"></td><td class="runner-cr alt"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_fields}
+
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style2 runner-b-srchbuttons {$brickclass_srchbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >{BEGIN search_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+</span>
+{END search_button} 
+{BEGIN reset_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$resetbutton_attrs}>Reset</a>
+</span>
+{END reset_button}
+{BEGIN back_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backbutton_attrs}>Back to list</a>
+</span>
+{END back_button}</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_search}
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

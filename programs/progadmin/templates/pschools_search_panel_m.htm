@@ -1,0 +1,77 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_sch_id}
+			<a href="#" id="addSearchControl_sch_id" class="addSearchControl" {$addSearchControl_sch_id_attrs}>Sch Id</a><br>
+		{END addSearch_sch_id}
+		{BEGIN addSearch_submited}
+			<a href="#" id="addSearchControl_submited" class="addSearchControl" {$addSearchControl_submited_attrs}>Submited</a><br>
+		{END addSearch_submited}
+		{BEGIN addSearch_username}
+			<a href="#" id="addSearchControl_username" class="addSearchControl" {$addSearchControl_username_attrs}>Username</a><br>
+		{END addSearch_username}
+		{BEGIN addSearch_password}
+			<a href="#" id="addSearchControl_password" class="addSearchControl" {$addSearchControl_password_attrs}>Password</a><br>
+		{END addSearch_password}
+		{BEGIN addSearch_sch_code}
+			<a href="#" id="addSearchControl_sch_code" class="addSearchControl" {$addSearchControl_sch_code_attrs}>Sch Code</a><br>
+		{END addSearch_sch_code}
+		{BEGIN addSearch_sch_perioxi}
+			<a href="#" id="addSearchControl_sch_perioxi" class="addSearchControl" {$addSearchControl_sch_perioxi_attrs}>Sch Perioxi</a><br>
+		{END addSearch_sch_perioxi}
+		{BEGIN addSearch_sch_name}
+			<a href="#" id="addSearchControl_sch_name" class="addSearchControl" {$addSearchControl_sch_name_attrs}>Sch Name</a><br>
+		{END addSearch_sch_name}
+		{BEGIN addSearch_sch_dimos}
+			<a href="#" id="addSearchControl_sch_dimos" class="addSearchControl" {$addSearchControl_sch_dimos_attrs}>Sch Dimos</a><br>
+		{END addSearch_sch_dimos}
+		{BEGIN addSearch_sch_phone}
+			<a href="#" id="addSearchControl_sch_phone" class="addSearchControl" {$addSearchControl_sch_phone_attrs}>Sch Phone</a><br>
+		{END addSearch_sch_phone}
+		{BEGIN addSearch_fax}
+			<a href="#" id="addSearchControl_fax" class="addSearchControl" {$addSearchControl_fax_attrs}>Fax</a><br>
+		{END addSearch_fax}
+		{BEGIN addSearch_email}
+			<a href="#" id="addSearchControl_email" class="addSearchControl" {$addSearchControl_email_attrs}>Email</a><br>
+		{END addSearch_email}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

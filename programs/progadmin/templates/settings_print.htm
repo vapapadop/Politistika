@@ -1,0 +1,278 @@
+<!doctype html><html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_pdf}
+<table class="runner-c runner-c-pdf" cellpadding="0" >
+<tr class="{$cheaderclass_pdf}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+
+<td  class="runner-cc runner-bl runner-b-printpdf" {$brickclass_printpdf}><span>{BEGIN pdflink_block}
+<a href="#" class=pdflink {$pdflink_attrs}>PDF View</a>
+{END pdflink_block}
+</span></td>
+
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_pdf}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_pdf}
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Ρυθμίσεις Εφαρμογής</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN active_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN active_fieldheader}
+	<b>Active</b>
+	{END active_fieldheader}
+</th>
+{END active_fieldheadercolumn}
+	{BEGIN trexon_sxol_etos_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN trexon_sxol_etos_fieldheader}
+	<b>Trexon Sxol Etos</b>
+	{END trexon_sxol_etos_fieldheader}
+</th>
+{END trexon_sxol_etos_fieldheadercolumn}
+	{BEGIN dide_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN dide_fieldheader}
+	<b>Dide</b>
+	{END dide_fieldheader}
+</th>
+{END dide_fieldheadercolumn}
+	{BEGIN max_wres_ana_programma_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN max_wres_ana_programma_fieldheader}
+	<b>Max Wres Ana Programma</b>
+	{END max_wres_ana_programma_fieldheader}
+</th>
+{END max_wres_ana_programma_fieldheadercolumn}
+	{BEGIN max_wres_ana_teacher_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN max_wres_ana_teacher_fieldheader}
+	<b>Max Wres Ana Teacher</b>
+	{END max_wres_ana_teacher_fieldheader}
+</th>
+{END max_wres_ana_teacher_fieldheadercolumn}
+	{BEGIN max_programmata_ana_teacher_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN max_programmata_ana_teacher_fieldheader}
+	<b>Max Programmata Ana Teacher</b>
+	{END max_programmata_ana_teacher_fieldheader}
+</th>
+{END max_programmata_ana_teacher_fieldheadercolumn}
+	{BEGIN max_ypeythinos_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN max_ypeythinos_fieldheader}
+	<b>Max Ypeythinos</b>
+	{END max_ypeythinos_fieldheader}
+</th>
+{END max_ypeythinos_fieldheadercolumn}
+	{BEGIN deadline_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN deadline_fieldheader}
+	<b>Deadline</b>
+	{END deadline_fieldheader}
+</th>
+{END deadline_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN active_fieldcolumn}
+<td  class="runner-cc {$active_class}" {$active_style}>
+	{$active_value}
+</td>
+{END active_fieldcolumn}
+	{BEGIN trexon_sxol_etos_fieldcolumn}
+<td  class="runner-cc {$trexon_sxol_etos_class}" {$trexon_sxol_etos_style}>
+	{$trexon_sxol_etos_value}
+</td>
+{END trexon_sxol_etos_fieldcolumn}
+	{BEGIN dide_fieldcolumn}
+<td  class="runner-cc {$dide_class}" {$dide_style}>
+	{$dide_value}
+</td>
+{END dide_fieldcolumn}
+	{BEGIN max_wres_ana_programma_fieldcolumn}
+<td  class="runner-cc {$max_wres_ana_programma_class}" {$max_wres_ana_programma_style}>
+	{$max_wres_ana_programma_value}
+</td>
+{END max_wres_ana_programma_fieldcolumn}
+	{BEGIN max_wres_ana_teacher_fieldcolumn}
+<td  class="runner-cc {$max_wres_ana_teacher_class}" {$max_wres_ana_teacher_style}>
+	{$max_wres_ana_teacher_value}
+</td>
+{END max_wres_ana_teacher_fieldcolumn}
+	{BEGIN max_programmata_ana_teacher_fieldcolumn}
+<td  class="runner-cc {$max_programmata_ana_teacher_class}" {$max_programmata_ana_teacher_style}>
+	{$max_programmata_ana_teacher_value}
+</td>
+{END max_programmata_ana_teacher_fieldcolumn}
+	{BEGIN max_ypeythinos_fieldcolumn}
+<td  class="runner-cc {$max_ypeythinos_class}" {$max_ypeythinos_style}>
+	{$max_ypeythinos_value}
+</td>
+{END max_ypeythinos_fieldcolumn}
+	{BEGIN deadline_fieldcolumn}
+<td  class="runner-cc {$deadline_class}" {$deadline_style}>
+	{$deadline_value}
+</td>
+{END deadline_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN active_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END active_fieldfootercolumn}
+{BEGIN trexon_sxol_etos_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END trexon_sxol_etos_fieldfootercolumn}
+{BEGIN dide_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END dide_fieldfootercolumn}
+{BEGIN max_wres_ana_programma_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END max_wres_ana_programma_fieldfootercolumn}
+{BEGIN max_wres_ana_teacher_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END max_wres_ana_teacher_fieldfootercolumn}
+{BEGIN max_programmata_ana_teacher_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END max_programmata_ana_teacher_fieldfootercolumn}
+{BEGIN max_ypeythinos_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END max_ypeythinos_fieldfootercolumn}
+{BEGIN deadline_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END deadline_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

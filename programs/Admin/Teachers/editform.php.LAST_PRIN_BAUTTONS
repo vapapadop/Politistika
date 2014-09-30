@@ -1,0 +1,1061 @@
+<?php 
+
+
+session_start(); 	
+
+if (!isset($_SESSION['authenticatedUser'])){
+  header("Location: ../../login.php"); 
+  exit; 
+}
+
+
+
+
+include '../../Includes/Logindb.inc'; 
+$connection=LoginToDB(); 
+?> 
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>ΑΙΤΗΣΕΙΣ ΕΚΠΑΙΔΕΥΤΙΚΩΝ - Επεξεργασία</title>
+
+ 
+  <link type="text/css" rel="stylesheet" href="../../global/admin_styles.css">
+ <SCRIPT src="scriptakia/main.js" 
+type=text/javascript></SCRIPT>
+
+</head>
+
+<body>
+
+<?php
+      $appUsername1 =$_SESSION["authenticatedUser"];
+       $QueryStr="SELECT sch_id,sch_name FROM pschools where sch_name='".$appUsername1."'";
+       $result5=QueryDB($QueryStr,$connection);
+       $row5=mysql_fetch_row($result5);
+      
+	  //to id tou sxoleiou pou ekane login
+	  $tid=$row5[0];
+
+	
+        $_SESSION['sch_id']=$tid;
+       
+
+
+$QueryStr="SELECT sch_id,submited, sch_perioxi,sch_name,sch_dimos,sch_phone,fax,email 
+                   FROM pschools WHERE sch_id=".$tid."" ;   
+         
+	$result30=QueryDB($QueryStr,$connection);   
+
+	$row30=mysql_fetch_row($result30);
+	
+	
+	$QueryStr="SELECT active, trexon_sxol_etos
+                   FROM settings " ;   
+         
+	$result70=QueryDB($QueryStr,$connection);   
+        $row70=mysql_fetch_row($result70);
+        $active=$row70[0];
+        $sxol_etos=$row70[1];
+	
+	
+	?>
+
+<table width='100%' height="100%" border='0' cellpadding='0' cellspacing='0'>
+<tr>
+  <td width='200' height="60" valign='center' align='center'><img src="../../Images/logo_1.gif" /></td>
+  <td class="top_banner" valign='center' align='center' ><b> ΔΙΕΥΘΥΝΣΗ ΔΕΥΤΕΡΟΒΑΘΜΙΑΣ ΕΚΠΑΙΔΕΥΣΗΣ ΑΝΑΤ. ΑΤΤΙΚΗΣ</b></td>
+</tr>
+<tr>
+  <td class="top_row_left"></td>
+  <td class="top_row_right"></td>
+</tr>
+<tr>
+  <td class="left_column">
+
+  <div class='nav_link'><a href='../../Admin/Teachers/main.php'>Αρχική Σελίδα</a></div><div class='nav_link'><a href='../../Admin/Teachers/2012-2013 EGKYKLIOS.docx' target="blank" >Εγκύκλιος</a></div><div class='nav_link'><a href='../../Admin/Teachers/logout.php'>Έξοδος</a></div>
+  </td>
+  <td class="main_content">
+ 
+    <?php 
+//session_start(); 	
+
+$ap=date('d/ m/ y');
+
+//$a=2;
+?>  
+
+
+
+<html>
+<head>
+<title>ΑΙΤΗΣΗ - ΔΗΛΩΣΗ </br>ΥΠΟΒΟΛΗΣ ΠΡΟΓΡΑΜΜΑΤΟΣ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="query_ekp.php_files/styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<script>
+$(function() {
+ $.datepicker.regional['el'] = {
+                closeText: 'Κλείσιμο',
+                prevText: 'Προηγούμενος',
+                nextText: 'Επόμενος',
+                currentText: 'Τρέχων Μήνας',
+                monthNames: ['Ιανουάριος','Φεβρουάριος','Μάρτιος','Απρίλιος','Μάιος','Ιούνιος',
+                'Ιούλιος','Αύγουστος','Σεπτέμβριος','Οκτώβριος','Νοέμβριος','Δεκέμβριος'],
+                monthNamesShort: ['Ιαν','Φεβ','Μαρ','Απρ','Μαι','Ιουν',
+                'Ιουλ','Αυγ','Σεπ','Οκτ','Νοε','Δεκ'],
+                dayNames: ['Κυριακή','Δευτέρα','Τρίτη','Τετάρτη','Πέμπτη','Παρασκευή','Σάββατο'],
+                dayNamesShort: ['Κυρ','Δευ','Τρι','Τετ','Πεμ','Παρ','Σαβ'],
+                dayNamesMin: ['Κυ','Δε','Τρ','Τε','Πε','Πα','Σα'],
+                dateFormat: 'dd/mm/yy', firstDay: 1,
+                isRTL: false};
+        $.datepicker.setDefaults($.datepicker.regional['el']);
+
+$( "#datepicker" ).datepicker({ dateFormat: "dd/mm/yy" });
+
+
+
+$( "#datepicker2" ).datepicker({ dateFormat: "dd/mm/yy" });
+
+
+});
+</script>
+
+</head>
+<body background="query_ekp.php_files/bg.gif"  text="#336699" leftmargin="0" topmargin="0"> 
+
+<!-- Κεντρικός Πίνακας -->
+<table width="700" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#C64000" bgcolor="#FFFFFF">
+<tr>
+  <td align="center" bgcolor="#C64000"><img src="../../ethno.gif" width="84" height="71"></td>
+</tr>
+<tr> 
+    <td bgcolor="#C64000"><div align="center" class="paragraph"> <font size="-1" color="#FFFFFF"><strong>ΔΙΕΥΘΥΝΣΗ ΔΕΥΤΕΡΟΒΑΘΜΙΑΣ ΕΚΠΑΙΔΕΥΣΗΣ ΑΝΑΤΟΛΙΚΗΣ ΑΤΤΙΚΗΣ      </strong></font><font color="#FFFFFF" size="-2"><br>
+
+
+      </div></td>
+</tr>
+<tr><td align="center">
+	  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript" src="validation.js"></script>
+
+<script type="text/javascript">
+<!--
+if (!String.prototype.trim) {
+ String.prototype.trim = function() {
+  return this.replace(/^\s+|\s+$/g,'');
+ }
+}
+
+
+
+function validateSubmit() {
+var a=document.stoixeia2.program_title.value;
+alert(a);
+a=a.trim();
+if (a == '') {alert('Please enter something, this field is mandatory');
+document.stoixeia2.program_title.focus();
+ 
+    return false;
+    
+  }
+  
+  return true;
+}
+var fieldInfo = new Array();
+
+
+fieldInfo.push("required,programa,Παρακαλούμε επιλέξτε τύπο προγράμματος.");
+fieldInfo.push("required,date,Παρακαλούμε εισάγετε ημερομηνία πρωτοκόλου.");
+fieldInfo.push("required,ar_protocol,Παρακαλούμε εισάγετε αριθμό πρωτοκόλου.");
+fieldInfo.push("digits_only,ar_protocol,Παρακαλούμε εισάγετε ψηφία.");
+fieldInfo.push("required,sch_teachers,Παρακαλούμε εισάγετε αριθμο καθηγητών.");
+fieldInfo.push("digits_only,sch_teachers,Παρακαλούμε εισάγετε ψηφία.");
+
+fieldInfo.push("required,sch_students,Παρακαλούμε εισάγετε αριθμο μαθητών.");
+fieldInfo.push("digits_only,sch_students,Παρακαλούμε εισάγετε ψηφία.");
+fieldInfo.push("required,dieythintis_name,Παρακαλούμε συμπληρώστε το πεδίο ΟΝΟΜΑΤΕΠΩΝΥΜΟ ΔΙΕΥΘΥΝΤΗ.");
+fieldInfo.push("letters_only,dieythintis_name,Παρακαλούμε εισάγετε το πεδίο ΟΝΟΜΑΤΕΠΩΝΥΜΟ ΔΙΕΥΘΥΝΤΗ: με Κεφαλαία Ελληνικά.");
+fieldInfo.push("required,klados_dieythinti,Παρακαλούμε επιλέξτε ΚΛΑΔΟ ΔΙΕΥΘΥΝΤΗ.");
+
+fieldInfo.push("required,program_title,Παρακαλούμε εισάγετε τον τίτλο του προγράμματος.");
+fieldInfo.push("letters,program_title,Παρακαλούμε εισάγετε τον τίτλο του προγράμματος με Ελληνικούς χαρακτήρες.");
+fieldInfo.push("required,ar_praksis,Παρακαλούμε εισάγετε Αρ. Πράξης:.");
+fieldInfo.push("digits_only,ar_praksis,Παρακαλούμε εισάγετε ψηφία.");
+fieldInfo.push("required,date_praksis,Παρακαλούμε εισάγετε Ημερομηνία πράξης.");
+
+
+fieldInfo.push("required,sch_orario,Παρακαλούμε επιλέξτε ωράριο σχολείου.");
+fieldInfo.push("required,ypeythinos_name,Παρακαλούμε συμπληρώστε το πεδίο ΟΝΟΜΑΤΕΠΩΝΥΜΟ ΕΚΠΑΙΔΕΥΤΙΚΟΥ ΠΟΥ ΑΝΑΛΑΜΒΑΝΕΙ ΤΟ ΠΡΟΓΡΑΜΜΑ .");
+fieldInfo.push("letters_only,ypeythinos_name,Παρακαλούμε συμπληρώστε το πεδίο με Κεφαλαία Ελληνικά.");
+fieldInfo.push("required,ypeythinos_amm,Παρακαλούμε συμπληρώστε το πεδίο ΑΡ. ΜΗΤΡΩΟΥ ΕΚΠΑΙΔΕΥΤΙΚΟΥ ΠΟΥ ΑΝΑΛΑΜΒΑΝΕΙ ΤΟ ΠΡΟΓΡΑΜΜΑ .");
+
+fieldInfo.push("digits_only,ypeythinos_amm,Παρακαλούμε εισάγετε ψηφία ατο πεδίο ΑΡ. ΜΗΤΡΩΟΥ ΕΚΠΑΙΔΕΥΤΙΚΟΥ ΠΟΥ ΑΝΑΛΑΜΒΑΝΕΙ ΤΟ ΠΡΟΓΡΑΜΜΑ.");
+fieldInfo.push("length=6,ypeythinos_amm,Παρακαλούμε εισάγετε 6 ψηφία στο πεδίο ΑΡ. ΜΗΤΡΩΟΥ ΕΚΠΑΙΔΕΥΤΙΚΟΥ ΠΟΥ ΑΝΑΛΑΜΒΑΝΕΙ ΤΟ ΠΡΟΓΡΑΜΜΑ."); 
+fieldInfo.push("required,ypeythinos_klados,Παρακαλούμε επιλέξτε τον κλάδο του ΕΚΠΑΙΔΕΥΤΙΚΟΥ ΠΟΥ ΑΝΑΛΑΜΒΑΝΕΙ ΤΟ ΠΡΟΓΡΑΜΜΑ .");
+
+fieldInfo.push("required,ypeythinos_again,Παρακαλούμε επιλέξτε ΝΑΙ ή ΟΧΙ στο πεδίο ΥΛΟΠΟΙΗΣΗ ΠΡΟΓΡΑΜΜΑΤΩΝ ΣΕ ΠΡΟΗΓΟΥΜΕΝΑ ΕΤΗ .");
+fieldInfo.push("letters,ypeythinos_epimorfosi,Παρακαλούμε συμπληρώστε με Ελληνικούς χαρακτήρες.");
+
+
+
+fieldInfo.push("letters_only,symetexwn1_name,Παρακαλούμε συμπληρώστε το πεδίο με Κεφαλαία Ελληνικά.");
+fieldInfo.push("digits_only,symetexwn1_amm,Παρακαλούμε εισάγετε ψηφία ατο πεδίο ΑΡ. ΜΗΤΡΩΟΥ ΕΚΠΑΙΔΕΥΤΙΚΟΥ ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΣΤΟ ΠΡΟΓΡΑΜΜΑ.");
+fieldInfo.push("length=6,symetexwn1_amm,Παρακαλούμε εισάγετε 6 ψηφία στο πεδίο ΑΡ. ΜΗΤΡΩΟΥ ΕΚΠΑΙΔΕΥΤΙΚΟΥ ΠΟΥ ΣΥΜΜΕΤΕΧΕΙ ΣΤΟ ΠΡΟΓΡΑΜΜΑ."); 
+fieldInfo.push("duplicate,symetexwn1_amm,ypeythinos_amm, ο ΑΡ. ΜΗΤΡΩΟΥ που συμπληρώσατε εμφανίζεται και σε προηγούμενο πεδίο");
+
+fieldInfo.push("letters_only,symetexwn2_name,Παρακαλούμε συμπληρώστε το πεδίο με Κεφαλαία Ελληνικά.");
+fieldInfo.push("letters_only,symetexwn3_name,Παρακαλούμε συμπληρώστε το πεδίο με Κεφαλαία Ελληνικά.");
+
+fieldInfo.push("required,mathites_synolo,Παρακαλούμε συμπληρώστε το πεδίο ΣΥΝΟΛΟ ΜΑΘΗΤΩΝ ΤΗΣ ΟΜΑΔΑΣ");
+
+-->
+</script>
+
+
+<!--form name="stoixeia"  onsubmit="return validateFields(stoixeia,fieldInfo);" action="http://users.sch.gr/vapapado/administration/process.php" method="post" enctype="multipart/form-data"-->
+
+<!--form action="http://localhost/formtools/process.php" method="post"-->
+<form name="stoixeia2"  onsubmit="return validateFields(stoixeia2,fieldInfo);" action="process_new.php" method="post" enctype="multipart/form-data">
+<!--input type="hidden" name="form_tools_form_id" value="4" /-->
+ 
+<table width="98%" border="0" cellpadding="0" cellspacing="0" >
+<tr><td  height="30"></td></tr>
+				
+ <tr>
+
+   <td>
+       <table width="100%" cellpadding="0" cellspacing="0">
+	      <tr>
+		     <td width="60%">&nbsp;</td>
+			 <td width="40%" class="maintext">
+			      <strong>Προς<br>Δ/ΝΣΗ Δ.Ε. ΑΝ. ΑΤΤΙΚΗΣ<br>Τμήμα Εκπαιδευτικών Θεμάτων</strong></td> 
+		  </tr>
+	   </table>
+
+   </td>
+ </tr> 
+  <tr><td height="50"  align="center"  valign="bottom" class="paragraph"><strong>Α Ι Τ Η Σ Η - Δ Η Λ Ω Σ Η </br>  Υ Π Ο Β Ο Λ Η Σ  Π Ρ Ο Γ Ρ Α Μ Μ Α Τ Ο Σ </strong></td>
+  <tr>
+      <td align="center" valign="top" class="maintext">(επέχει θέση Υπεύθυνης Δήλωσης του Ν. 1599/86)<br>
+        </td>
+    </tr>
+    </tr> 
+  <tr><td height="10"></td></tr>
+
+  <tr>
+      <td class="maintext"><font color="#990000" >Η συμπλήρωση των Ονομάτων γίνεται 
+        με κεφαλαία ελληνικά.<br>Τα πεδία με (*) είναι υποχρεωτικά.</font></td>
+    </tr>
+	 <tr><td height="10"></td></tr>
+  <tr><td height="1" bgcolor="#336699" ></td></tr>
+  <tr><td height="10"></td></tr>
+      <!-- Κύρια Στοιχεία -->
+  <tr><td>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	  <tr><td>
+	     <table width="100%" border="0" cellpadding="0" cellspacing="0" bordercolor="#000066">
+                <tr> 
+                  <td> <table width="100%" border="0" cellpadding="0" cellspacing="0"  cols="2">
+                      <tr valign="middle">                         
+                        <td width="150" height="10" class="maintext" valign="middle">
+                          <input  type="hidden" name="sch_id" value="<?php echo $tid ?>"> 
+                                                  </td>
+
+                      </tr>
+
+                       <tr valign="middle"> 
+                       <td width="180" height="30" class="maintext" valign="middle"> ΣΧΟΛΙΚΗ ΔΡΑΣΤΗΡΙΟΤΗΤΑ: *  </td>
+					   <td>                          
+                         <select name="programa" required>
+                            <option value="" selected>Επιλέξτε</option>
+                            <option value="ΑΓΩΓΗ ΣΤΑΔΙΟΔΡΟΜΙΑΣ" >ΑΓΩΓΗ ΣΤΑΔΙΟΔΡΟΜΙΑΣ</option>
+<option value="ΠΕΡΙΒΑΛΛΟΝΤΙΚΗ ΑΓΩΓΗ" >ΠΕΡΙΒΑΛΛΟΝΤΙΚΗ ΑΓΩΓΗ</option>
+<option value="ΑΓΩΓΗ ΥΓΕΙΑΣ" >ΑΓΩΓΗ ΥΓΕΙΑΣ</option>
+<option value="ΠΟΛΙΤΙΣΤΙΚΑ ΘΕΜΑΤΑ" >ΠΟΛΙΤΙΣΤΙΚΑ ΘΕΜΑΤΑ</option>
+<option value="E-twinning-Comenius" >E-twinning-Comenius</option>
+
+                          </select>
+                           
+                        </td>
+                      <tr> 
+                      
+					  <tr> <TD></TD><TD></TD>
+                  <td height="30" align="LEFT" class="maintext">Ημερομηνία : 
+                    <input name="date" type="text" id="datepicker" value="" size="15" maxlength="20"  required"></td>
+                </tr>
+				
+				<tr> <TD></TD><TD></TD>
+                  <td height="30" align="LEFT" class="maintext">Αριθ. Πρωτ. : 
+                    <input name="ar_protocol" type="text" value="" size="7" maxlength="5" required>
+                          * </td>
+                </tr>
+					<tr> 
+                        <td height="30" class="maintext"> Σχ. Έτος:  :
+						<input name="sxol_etos" type="text" value="<?php echo $sxol_etos ?>" size="15" maxlength="30" readonly="true">
+                          
+                         </td>
+                      </tr>
+
+<tr valign="middle"> 
+                        <td width="150" height="30" class="maintext" valign="middle"> Δ/ΝΣΗ ΕΚΠΑΙΔΕΥΣΗΣ           : </td>
+                        <td><input name="dide_name" type="text" value="ΔΔΕ ΑΝ. ΑΤΤΙΚΗΣ" size="30" maxlength="30" readonly="true"">
+                          * </td>
+                      </tr>
+
+					
+                      <tr valign="middle"> 
+                        <td width="150" height="30" class="maintext" valign="middle"> ΣΧΟΛΙΚΗ ΜΟΝΑΔΑ           : </td>
+                        <td><input name="sch_name" type="text" value="<?php echo $row30[3] ?>" size="30" maxlength="30" readonly="true">
+                          * </td>
+                      </tr>
+                      
+			 
+			
+
+
+                    </table></td>
+                </tr>
+                <!-- Διεύθυνη Αλληλογραφίας -->
+                <tr> 
+                  <td height="10"></td>
+                </tr>
+                
+                <tr> 
+                  <td height="10"></td>
+                </tr>
+                <tr valign="middle"> 
+                  <td> <table width="100%" cellpadding="0" cellspacing="0">
+				  
+				  <tr valign="middle"> 
+                        <td width="200" height="30" class="maintext" valign="middle"> Τηλ σταθερό : 
+                          <input name="tel_ergasias" type="text" value="<?php echo $row30[5] ?>" size="10" maxlength="10" readonly="true" required"> </td>
+                        <td>Δήμος : 
+                          <input  name="dimos" type="text" value="<?php echo $row30[4] ?>" size="25": readonly="true"> </td>
+                      </tr>
+				  <tr valign="middle"> 
+                        <td width="200" height="30" class="maintext" valign="middle"> Fax : 
+                          <input name="fax" type="text" value="<?php echo $row30[6] ?>" size="10" maxlength="10" > </td>
+                        <td>e-mail : 
+                          <input name ="e_mail" type="text" value="<?php echo $row30[7] ?>" size="25" maxlength="35" readonly="true" required> </td>
+                      </tr>
+				  
+				  <tr valign="middle"> 
+                        <td width="200" height="30" class="maintext" valign="middle"> ΑΡΙΘΜΟΣ ΕΚΠΑΙΔΕΥΤΙΚΩΝ ΣΧΟΛΕΙΟΥ: </td>
+                        <td><input name ="sch_teachers" type="text" value="" size="6" maxlength="3" required> </td>
+                      </tr>
+				  
+                   <tr valign="middle"> 
+                        <td width="200" height="30" class="maintext" valign="middle"> ΑΡΙΘΜΟΣ ΜΑΘΗΤΩΝ ΣΧΟΛΕΙΟΥ : </td>
+                        <td><input name ="sch_students" type="text" value="" size="6" maxlength="4"  required> </td>
+                      </tr>   
+                     
+                   <tr valign="middle"> 
+                        <td width="200" height="30" class="maintext" valign="middle"> ΟΝΟΜΑΤΕΠΩΝΥΜΟ  ΔΙΕΥΘΥΝΤΗ: : </td>
+                        <td><input name ="dieythintis_name" type="text" value="" size="25" maxlength="35"  required> </td>
+						<td height="30" class="maintext"> ΚΛΑΔΟΣ :
+                          <select name="klados_dieythinti"  required>
+                            <option value="" selected>Επιλέξτε ειδικότητα</option>
+                            <option value="ΠΕ 60" >ΠΕ 60</option>
+<option value="ΠΕ 70" >ΠΕ 70</option>
+<option value="ΠΕ 01" >ΠΕ 01</option>
+<option value="ΠΕ 02" >ΠΕ 02</option>
+
+<option value="ΠΕ 03" >ΠΕ 03</option>
+<option value="ΠΕ 04" >ΠΕ 04</option>
+<option value="ΠΕ 05" >ΠΕ 05</option>
+<option value="ΠΕ 05" >ΠΕ 06</option>
+<option value="ΠΕ 07" >ΠΕ 07</option>
+<option value="ΠΕ 08" >ΠΕ 08</option>
+<option value="ΠΕ 09" >ΠΕ 09</option>
+<option value="ΠΕ 10" >ΠΕ 10</option>
+<option value="ΠΕ 11" >ΠΕ 11</option>
+
+<option value="ΠΕ 12" >ΠΕ 12</option>
+<option value="ΠΕ 13" >ΠΕ 13</option>
+<option value="ΠΕ 14" >ΠΕ 14</option>
+<option value="ΠΕ 15" >ΠΕ 15</option>
+<option value="ΠΕ 16" >ΠΕ 16</option>
+<option value="ΠΕ 17" >ΠΕ 17</option>
+<option value="ΠΕ 18" >ΠΕ 18</option>
+<option value="ΠΕ 19" >ΠΕ 19</option>
+<option value="ΠΕ 20" >ΠΕ 20</option>
+
+<option value="other" >'Αλλη</option>
+                          </select>
+                          * &nbsp;&nbsp;</td>
+                      </tr>    
+					 
+					  
+					  
+                    </table>
+                    <!-- Επαγγελματικά Στοιχεία -->
+                <tr> 
+                  <td height="10"></td>
+                </tr>
+
+               
+                <tr> 
+                  <td height="1" bgcolor="#336699" ></td>
+                </tr>
+                <tr> 
+                  <td height="10"></td>
+                </tr>
+                <tr> 
+                  <td> <table width="100%" cellpadding="0" cellspacing="0">
+
+				   <tr> 
+                  <td class="maintext"><strong>Ο ΤΙΤΛΟΣ ΤΟΥ ΠΡΟΓΡΑΜΜΑΤΟΣ ΜΑΣ:</strong></td>
+                </tr>
+				  <tr valign="middle"> 
+                        <td width="100%" height="30" class="maintext" valign="middle"> 
+						<textarea cols="75" rows="2" name="program_title"   required></textarea>
+						</td>
+                        
+                      </tr>
+				  
+				   <tr> 
+				   
+                  <td> <table width="100%" cellpadding="0" cellspacing="0">
+<tr> 
+                  <td height="10"></td>
+                </tr>
+				   <tr> 
+                  <td width="300" class="maintext"><strong>ΠΡΑΞΗ ΑΝΑΘΕΣΗΣ ΤΟΥ ΣΥΛΛΟΓΟΥ ΔΙΔΑΣΚΟΝΤΩΝ:</strong></td>
+                </tr>
+				  
+				  <tr> 
+                        <td width="200" height="30" class="maintext" valign="middle"> Αρ. Πράξης: 
+                          <input name="ar_praksis" type="text" value="" size="10" maxlength="10" required> </td>
+                        <td>Ημερομηνία: 
+                          <input name ="date_praksis" type="text" id="datepicker2" value="" size="25" maxlength="35" required> </td>
+                      </tr>
+				  <tr> 
+                  <td height="10"></td>
+                </tr>
+				  <tr valign="middle"> 
+                       <td width="180" height="30" class="maintext" valign="middle"><strong> ΤΟ ΣΧΟΛΕΙΟ ΛΕΙΤΟΥΡΓΕΙ: *</strong>  </td>
+					   <td>                          
+                          <input  type="radio" name="sch_orario" value="ΜΟΝΟ ΠΡΩΙ">ΜΟΝΟ ΠΡΩΙ </BR>
+						 
+                          <input  type="radio" name="sch_orario" value="ΠΡΩΙ ΚΑΙ ΑΠΟΓΕΥΜΑ">ΠΡΩΙ ΚΑΙ ΑΠΟΓΕΥΜΑ</BR>
+						   
+                          <input  type="radio" name="sch_orario" value="ΜΟΝΟ ΑΠΟΓΕΥΜΑ">ΜΟΝΟ ΑΠΟΓΕΥΜΑ</BR>
+						               
+                           
+                        </td>
+                      <tr> 
+				   <tr> 
+                  <td height="10"></td>
+                </tr>
+				  </table>
+				  <table width="100%" cellpadding="1" cellspacing="1" border="1">
+				  <tr> 
+                        <td width="80" height="30" class="maintext" align="center"> ΟΝΟΜΑΤΕΠΩΝΥΜΟ ΕΚΠΑΙΔΕΥΤΙΚΟΥ ΠΟΥ ΑΝΑΛΑΜΒΑΝΕΙ ΤΟ ΠΡΟΓΡΑΜΜΑ
+ 
+                           </td>
+						  <td width="80" height="30" class="maintext" align="center"> ΑΡ.ΜΗΤΡΩΟΥ
+ 
+                           </td> 
+						   
+                        <td width="80" height="30" class="maintext" align="center">(ΠΕ) 
+                           </td>
+						  <td width="80" height="30" class="maintext" align="center" >ΩΡΕΣ ΣΥΜΠΛΗΡΩΣΗΣ ΩΡΑΡΙΟΥ 
+                           </td> 
+						  <td width="80" height="30" class="maintext" align="center">ΥΛΟΠΟΙΗΣΗ ΠΡΟΓΡΑΜΜΑΤΩΝ ΣΕ ΠΡΟΗΓΟΥΜΕΝΑ ΕΤΗ (ΝΑΙ/ΟΧΙ) 
+                           </td>
+						   <td width="80" height="30" class="maintext" align="center">ΣΧΕΤΙΚΗ ΕΠΙΜΟΡΦΩΣΗ(ΦΟΡΕΑΣ ΕΠΙΜΟΡΦΩΣΗΣ)
+
+                           </td> 
+						   
+                      </tr>
+				  
+				  <tr> 
+                        <td width="80" height="30" class="maintext" align="center"> 
+						<input name ="ypeythinos_name" type="text" value="" size="25" maxlength="35">
+ 
+                           </td>
+						   <td width="80" height="30" class="maintext" align="center"> 
+						<input name ="ypeythinos_amm" type="text" value="" size="6" maxlength="6"  >
+ 
+                           </td>
+                        <td width="80" height="30" class="maintext" align="center">
+						       <select name="ypeythinos_klados" >
+                            <option value="0" selected>Επιλέξτε</option>
+                            <option value="ΠΕ 60" >ΠΕ 60</option>
+<option value="ΠΕ 70" >ΠΕ 70</option>
+<option value="ΠΕ 01" >ΠΕ 01</option>
+<option value="ΠΕ 02" >ΠΕ 02</option>
+
+<option value="ΠΕ 03" >ΠΕ 03</option>
+<option value="ΠΕ 04" >ΠΕ 04</option>
+<option value="ΠΕ 05" >ΠΕ 05</option>
+<option value="ΠΕ 05" >ΠΕ 06</option>
+<option value="ΠΕ 07" >ΠΕ 07</option>
+<option value="ΠΕ 08" >ΠΕ 08</option>
+<option value="ΠΕ 09" >ΠΕ 09</option>
+<option value="ΠΕ 10" >ΠΕ 10</option>
+<option value="ΠΕ 11" >ΠΕ 11</option>
+
+<option value="ΠΕ 12" >ΠΕ 12</option>
+<option value="ΠΕ 13" >ΠΕ 13</option>
+<option value="ΠΕ 14" >ΠΕ 14</option>
+<option value="ΠΕ 15" >ΠΕ 15</option>
+<option value="ΠΕ 16" >ΠΕ 16</option>
+<option value="ΠΕ 17" >ΠΕ 17</option>
+<option value="ΠΕ 18" >ΠΕ 18</option>
+<option value="ΠΕ 19" >ΠΕ 19</option>
+<option value="ΠΕ 20" >ΠΕ 20</option>
+
+<option value="other" >'Αλλη</option>
+                          </select> 
+                           </td>
+						  <td width="100" height="30" class="maintext" align="center" >
+						         <select name="ypeythinos_wres" >
+                            <option value="0" selected>Επιλέξτε</option>
+                            <option value="0" >0 ώρες</option>
+<option value="1" >1 ώρα</option>
+<option value="2" >2 ώρες</option>
+
+                          </select>
+                           </td> 
+						  <td width="100" height="30" class="maintext" align="center">
+						 ΝΑΙ
+                          
+                          <input  type="radio" name="ypeythinos_again" value="ΝΑΙ"  ></br>ΟΧΙ 
+                          <input  type="radio" name="ypeythinos_again" value="ΟΧΙ"  > 
+                           </td>
+						   <td width="100" height="30" class="maintext" align="center">
+						  
+<textarea cols="25" rows="5" name="ypeythinos_epimorfosi" required></textarea>
+                           </td> 
+						   
+                      </tr>
+				  </table>
+				  
+				  
+				  <table width="100%" cellpadding="1" cellspacing="1" border="1">
+				  <tr> 
+                        <td width="80" height="30" class="maintext" align="center">ΕΚΠΑΙΔΕΥΤΙΚΟΙ ΠΟΥ ΣΥΜΜΕΤΕΧΟΥΝ
+ 
+                           </td>
+						  <td width="80" height="30" class="maintext" align="center"> ΑΡ.ΜΗΤΡΩΟΥ
+ 
+                           </td> 
+						   
+                        <td width="80" height="30" class="maintext" align="center">(ΠΕ) 
+                           </td>
+						  <td width="80" height="30" class="maintext" align="center" >ΩΡΕΣ ΣΥΜΠΛΗΡΩΣΗΣ ΩΡΑΡΙΟΥ 
+                           </td> 
+						  <td width="80" height="30" class="maintext" align="center">ΥΛΟΠΟΙΗΣΗ ΠΡΟΓΡΑΜΜΑΤΩΝ ΣΕ ΠΡΟΗΓΟΥΜΕΝΑ ΕΤΗ (ΝΑΙ/ΟΧΙ) 
+                           </td>
+						   <td width="80" height="30" class="maintext" align="center">ΣΧΕΤΙΚΗ ΕΠΙΜΟΡΦΩΣΗ(ΦΟΡΕΑΣ ΕΠΙΜΟΡΦΩΣΗΣ)
+
+                           </td> 
+						   
+                      </tr>
+				  
+				  <tr> 
+                        <td width="80" height="30" class="maintext" align="center"> 
+						<input name ="symetexwn1_name" type="text" value="" size="25" maxlength="35">
+ 
+                           </td>
+						   <td width="80" height="30" class="maintext" align="center"> 
+						<input name ="symetexwn1_amm" type="text" value="" size="6" maxlength="6" >
+ 
+                           </td>
+                        <td width="80" height="30" class="maintext" align="center">
+						       <select name="symetexwn1_klados" >
+                            <option value="0" selected>Επιλέξτε</option>
+                            <option value="ΠΕ 60" >ΠΕ 60</option>
+<option value="ΠΕ 70" >ΠΕ 70</option>
+<option value="ΠΕ 01" >ΠΕ 01</option>
+<option value="ΠΕ 02" >ΠΕ 02</option>
+
+<option value="ΠΕ 03" >ΠΕ 03</option>
+<option value="ΠΕ 04" >ΠΕ 04</option>
+<option value="ΠΕ 05" >ΠΕ 05</option>
+<option value="ΠΕ 05" >ΠΕ 06</option>
+<option value="ΠΕ 07" >ΠΕ 07</option>
+<option value="ΠΕ 08" >ΠΕ 08</option>
+<option value="ΠΕ 09" >ΠΕ 09</option>
+<option value="ΠΕ 10" >ΠΕ 10</option>
+<option value="ΠΕ 11" >ΠΕ 11</option>
+
+<option value="ΠΕ 12" >ΠΕ 12</option>
+<option value="ΠΕ 13" >ΠΕ 13</option>
+<option value="ΠΕ 14" >ΠΕ 14</option>
+<option value="ΠΕ 15" >ΠΕ 15</option>
+<option value="ΠΕ 16" >ΠΕ 16</option>
+<option value="ΠΕ 17" >ΠΕ 17</option>
+<option value="ΠΕ 18" >ΠΕ 18</option>
+<option value="ΠΕ 19" >ΠΕ 19</option>
+<option value="ΠΕ 20" >ΠΕ 20</option>
+
+<option value="other" >'Αλλη</option>
+                          </select> 
+                           </td>
+						  <td width="100" height="30" class="maintext" align="center" >
+						         <select name="symetexwn1_wres" >
+                            <option value="0" selected>Επιλέξτε</option>
+                            <option value="0" >0 ώρες</option>
+<option value="1" >1 ώρα</option>
+<option value="2" >2 ώρες</option>
+
+                          </select>
+                           </td> 
+						  <td width="100" height="30" class="maintext" align="center">
+						 ΝΑΙ
+                          
+                          <input  type="radio" name="symetexwn1_again" value="ΝΑΙ"  ></br>ΟΧΙ 
+                          <input  type="radio" name="symetexwn1_again" value="ΟΧΙ"  > 
+                           </td>
+						   <td width="100" height="30" class="maintext" align="center">
+						  <textarea cols="25" rows="5" name="symetexwn1_epimorfosi" required></textarea>
+
+                           </td> 
+						   
+                      </tr>
+					  
+					   <tr> 
+                        <td width="80" height="30" class="maintext" align="center"> 
+						<input name ="symetexwn2_name" type="text" value="" size="25" maxlength="35">
+ 
+                           </td>
+						   <td width="80" height="30" class="maintext" align="center"> 
+						<input name ="symetexwn2_amm" type="text" value="" size="6" maxlength="6">
+ 
+                           </td>
+                        <td width="80" height="30" class="maintext" align="center">
+						       <select name="symetexwn2_klados" >
+                            <option value="0" selected>Επιλέξτε</option>
+                            <option value="ΠΕ 60" >ΠΕ 60</option>
+<option value="ΠΕ 70" >ΠΕ 70</option>
+<option value="ΠΕ 01" >ΠΕ 01</option>
+<option value="ΠΕ 02" >ΠΕ 02</option>
+
+<option value="ΠΕ 03" >ΠΕ 03</option>
+<option value="ΠΕ 04" >ΠΕ 04</option>
+<option value="ΠΕ 05" >ΠΕ 05</option>
+<option value="ΠΕ 05" >ΠΕ 06</option>
+<option value="ΠΕ 07" >ΠΕ 07</option>
+<option value="ΠΕ 08" >ΠΕ 08</option>
+<option value="ΠΕ 09" >ΠΕ 09</option>
+<option value="ΠΕ 10" >ΠΕ 10</option>
+<option value="ΠΕ 11" >ΠΕ 11</option>
+
+<option value="ΠΕ 12" >ΠΕ 12</option>
+<option value="ΠΕ 13" >ΠΕ 13</option>
+<option value="ΠΕ 14" >ΠΕ 14</option>
+<option value="ΠΕ 15" >ΠΕ 15</option>
+<option value="ΠΕ 16" >ΠΕ 16</option>
+<option value="ΠΕ 17" >ΠΕ 17</option>
+<option value="ΠΕ 18" >ΠΕ 18</option>
+<option value="ΠΕ 19" >ΠΕ 19</option>
+<option value="ΠΕ 20" >ΠΕ 20</option>
+
+<option value="other" >'Αλλη</option>
+                          </select> 
+                           </td>
+						  <td width="100" height="30" class="maintext" align="center" >
+						         <select name="symetexwn2_wres" >
+                            <option value="0" selected>Επιλέξτε</option>
+                            <option value="0" >0 ώρες</option>
+<option value="1" >1 ώρα</option>
+<option value="2" >2 ώρες</option>
+
+                          </select>
+                           </td> 
+						  <td width="100" height="30" class="maintext" align="center">
+						 ΝΑΙ
+                          
+                          <input  type="radio" name="symetexwn2_again" value="ΝΑΙ"  ></br>ΟΧΙ 
+                          <input  type="radio" name="symetexwn2_again" value="ΟΧΙ"  > 
+                           </td>
+						   <td width="100" height="30" class="maintext" align="center">
+						  
+<textarea cols="25" rows="5" name="symetexwn2_epimorfosi" required></textarea>
+                           </td> 
+						   
+                      </tr>
+					   <tr> 
+                        <td width="80" height="30" class="maintext" align="center"> 
+						<input name ="symetexwn3_name" type="text" value="" size="25" maxlength="35">
+ 
+                           </td>
+						   <td width="80" height="30" class="maintext" align="center"> 
+						<input name ="symetexwn3_amm" type="text" value="" size="6" maxlength="6">
+ 
+                           </td>
+                        <td width="80" height="30" class="maintext" align="center">
+						       <select name="symetexwn3_klados" >
+                            <option value="0" selected>Επιλέξτε</option>
+                            <option value="ΠΕ 60" >ΠΕ 60</option>
+<option value="ΠΕ 70" >ΠΕ 70</option>
+<option value="ΠΕ 01" >ΠΕ 01</option>
+<option value="ΠΕ 02" >ΠΕ 02</option>
+
+<option value="ΠΕ 03" >ΠΕ 03</option>
+<option value="ΠΕ 04" >ΠΕ 04</option>
+<option value="ΠΕ 05" >ΠΕ 05</option>
+<option value="ΠΕ 05" >ΠΕ 06</option>
+<option value="ΠΕ 07" >ΠΕ 07</option>
+<option value="ΠΕ 08" >ΠΕ 08</option>
+<option value="ΠΕ 09" >ΠΕ 09</option>
+<option value="ΠΕ 10" >ΠΕ 10</option>
+<option value="ΠΕ 11" >ΠΕ 11</option>
+
+<option value="ΠΕ 12" >ΠΕ 12</option>
+<option value="ΠΕ 13" >ΠΕ 13</option>
+<option value="ΠΕ 14" >ΠΕ 14</option>
+<option value="ΠΕ 15" >ΠΕ 15</option>
+<option value="ΠΕ 16" >ΠΕ 16</option>
+<option value="ΠΕ 17" >ΠΕ 17</option>
+<option value="ΠΕ 18" >ΠΕ 18</option>
+<option value="ΠΕ 19" >ΠΕ 19</option>
+<option value="ΠΕ 20" >ΠΕ 20</option>
+
+<option value="other" >'Αλλη</option>
+                          </select> 
+                           </td>
+						  <td width="100" height="30" class="maintext" align="center" >
+						         <select name="symetexwn3_wres" >
+                            <option value="0" selected>Επιλέξτε</option>
+                            <option value="0" >0 ώρες</option>
+<option value="1" >1 ώρα</option>
+<option value="2" >2 ώρες</option>
+
+                          </select>
+                           </td> 
+						  <td width="100" height="30" class="maintext" align="center">
+						 ΝΑΙ
+                          
+                          <input  type="radio" name="symetexwn3_again" value="ΝΑΙ"  ></br>ΟΧΙ 
+                          <input  type="radio" name="symetexwn3_again" value="ΟΧΙ"  > 
+                           </td>
+						   <td width="100" height="30" class="maintext" align="center">
+						   
+<textarea cols="25" rows="5" name="symetexwn3_epimorfosi" required></textarea>
+                           </td> 
+						   
+                      </tr>
+					  
+				  </table>
+				  <tr> 
+                  <td height="10"></td>
+                </tr>
+				
+				<table width="100%" cellpadding="0" cellspacing="0">
+<tr> 
+                  <td height="10"></td>
+                </tr>
+				   <tr> 
+                  <td width="300" class="maintext"><strong>ΜΑΘΗΤΕΣ ΠΟΥ ΣΥΜΜΕΤΕΧΟΥΝ ΣΤΟ ΠΡΟΓΡΑΜΜΑ:</strong></td>
+                </tr>
+				  
+				  <tr> 
+                        <td width="200" height="30" class="maintext" valign="middle"> ΣΥΝΟΛΟ ΜΑΘΗΤΩΝ ΤΗΣ ΟΜΑΔΑΣ: 
+                          <input name="mathites_synolo" type="text" value="" size="10" maxlength="10" > </td>
+                        <td>ΑΓΟΡΙΑ: 
+                          <input name ="agoria" type="text" value="" size="10" maxlength="10" > </td>
+						  <td>ΚΟΡΙΤΣΙΑ: 
+                          <input name ="koritsia" type="text" value="" size="10" maxlength="10" > </td>
+                      </tr>
+				  <tr> 
+                  <td height="10"></td>
+                </tr>
+				  <tr valign="middle"> 
+                      
+					   <td>                          
+                          <input  type="radio" name="amiges" value="ΑΜΙΓΕΣ ΤΜΗΜΑ">ΑΜΙΓΕΣ ΤΜΗΜΑ   
+						 
+                          <input  type="radio" name="amiges" value="ΜΕΙΚΤΗ ΟΜΑΔΑ">ΜΕΙΚΤΗ ΟΜΑΔΑ</BR>
+						   
+                         
+						               
+                           
+                        </td>
+                      <tr> 
+				   <tr> 
+                  <td height="10"></td>
+                </tr>
+				  </table>
+				
+				<table width="100%" cellpadding="0" cellspacing="0">
+<tr> 
+                  <td height="10"></td>
+                </tr>
+				   <tr> 
+                  <td width="200" class="maintext"><strong>ΣΥΝΑΝΤΗΣΗ ΟΜΑΔΑΣ:</strong></td>
+                </tr>
+				  
+				  <tr> 
+                        <td width="100" height="30" class="maintext" valign="middle"> ΗΜΕΡΑ/ΕΣ: 
+                          <input name ="meet_day" type="text" value="" size="20" maxlength="25" required> </td>
+
+
+
+						  </td>
+                        <td>ΩΡΑ/ΕΣ: 
+                          <input name ="meet_hour" type="text" value="" size="20" maxlength="20" > </td>
+						  <td>ΤΟΠΟΣ: 
+                          <input name ="meet_place" type="text" value="" size="20" maxlength="25" > </td>
+                      </tr>
+				  <tr> 
+                  <td height="10"></td>
+                </tr>
+				
+				<tr> 
+                  <td><strong>ΥΠΑΡΧΕΙ ΣΤΟ ΣΧΟΛΕΙΟ ΑΡΧΕΙΟ ΤΩΝ ΣΧΟΛΙΚΩΝ ΔΡΑΣΤΗΡΙΟΤΗΤΩΝ;
+				 </strong></td>
+                
+                      
+					   <td>                          
+                          <input  type="radio" name="arxeio" value="ΝΑΙ">ΝΑΙ   
+						 
+                          <input  type="radio" name="arxeio" value="ΟΧΙ">ΟΧΙ</BR>
+						   
+                         
+						               
+                           
+                        </td>
+                      <tr> 
+				   <tr> 
+                  <td height="10"></td>
+                </tr>
+				  </table>
+				  
+              <tr> 
+                  <td height="10"></td>
+                </tr>
+                <tr> 
+                  <td> <table width="100%" cellpadding="0" cellspacing="0">
+
+				   <tr> 
+                  <td class="maintext"><strong>ΠΑΙΔΑΓΩΓΙΚΗ ΔΙΑΔΙΚΑΣΙΑ:</strong></td>
+                </tr>
+				<tr> 
+                  <td class="maintext"><strong>A.ΥΠΟΘΕΜΑΤΑ (ΠΟΙΕΣ ΔΙΑΣΤΑΣΕΙΣ-ΟΨΕΙΣ ΤΟΥ ΘΕΜΑΤΟΣ ΘΑ ΠΡΟΣΕΓΓΙΣΕΤΕ):</strong></td>
+                </tr>
+				
+				  <tr valign="middle"> 
+                        <td width="100%" height="30" class="maintext" valign="middle"> 
+						<textarea cols="100" rows="5" name="ypothemata" ></textarea>
+						</td>
+                        
+                      </tr>
+				<tr> 
+                  <td class="maintext"><strong>Β. ΠΟΙΟΥΣ ΠΑΙΔΑΓΩΓΙΚΟΥΣ ΣΤΟΧΟΥΣ ΒΑΛΑΤΕ; (γράψτε συνοπτικά τους πιο σημαντικούς):</strong></td>
+                </tr>
+				
+				  <tr valign="middle"> 
+                        <td width="100%" height="30" class="maintext" valign="middle"> 
+						<textarea cols="100" rows="5" name="stoxoi" ></textarea>
+						</td>
+                        
+                      </tr>	  
+				<tr> 
+                  <td class="maintext"><strong>Γ. ΜΕΘΟΔΟΛΟΓΙΑ ΥΛΟΠΟΙΗΣΗΣ – ΣΥΝΕΡΓΑΣΙΕΣ ΜΕ ΑΛΛΟΥΣ ΦΟΡΕΙΣ:</strong></td>
+                </tr>
+				
+				  <tr valign="middle"> 
+                        <td width="100%" height="30" class="maintext" valign="middle"> 
+						<textarea cols="100" rows="5" name="methodologia" ></textarea>
+						</td>
+                        
+                      </tr>	  
+<tr> 
+                  <td class="maintext"><strong>Δ. ΠΕΔΙΑ ΣΥΝΔΕΣΗΣ ΜΕ ΤΑ ΠΡΟΓΡΑΜΜΑΤΑ ΣΠΟΥΔΩΝ ΤΩΝ ΑΝΤΙΣΤΟΙΧΩΝ ΓΝΩΣΤΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ:</strong></td>
+                </tr>
+				
+				  <tr valign="middle"> 
+                        <td width="100%" height="30" class="maintext" valign="middle"> 
+						<textarea cols="100" rows="5" name="syndeseis" ></textarea>
+						</td>
+                        
+                      </tr>	 
+					  
+					  
+</table>					  
+
+<table width="100%" cellpadding="0" cellspacing="0">
+
+				  
+				<tr> 
+                  <td class="maintext"><strong>Ε. ΚΑΤΑΓΡΑΨΤΕ ΣΥΝΟΠΤΙΚΑ ΤΗΝ ΧΡΟΝΙΚΗ ΕΞΕΛΙΞΗ ΤΟΥ ΠΡΟΓΡΑΜΜΑΤΟΣ ΣΑΣ 
+ΚΑΤΑ ΤΗ ΣΧΟΛΙΚΗ ΧΡΟΝΙΑ (20- 25 ΔΙΩΡΑ)
+Η χρονική εξέλιξη του προγράμματος
+( διερεύνηση θέματος, επεξεργασία, υλοποίηση δράσεων, επισκέψεων, παρουσίαση κλπ)
+</strong></td>
+                </tr></table>
+				<table width="100%" cellpadding="1" cellspacing="1"border="1">
+				<tr valign="middle"><td width="20%" height="30" class="maintext" valign="middle" align="center"><strong>1ος Μήνας</strong></td>
+                        <td width="100%" height="30" class="maintext" valign="middle"> 
+						<textarea cols="100" rows="5" name="month1" ></textarea>
+						</td>
+                        
+                      </tr>	 
+				<tr valign="middle"><td width="20%" height="30" class="maintext" valign="middle" align="center"><strong>2ος Μήνας</strong></td>
+                        <td width="100%" height="30" class="maintext" valign="middle"> 
+						<textarea cols="100" rows="5" name="month2" ></textarea>
+						</td>
+                        
+                      </tr>	
+				<tr valign="middle"><td width="20%" height="30" class="maintext" valign="middle" align="center"><strong>3ος Μήνας</strong></td>
+                        <td width="100%" height="30" class="maintext" valign="middle"> 
+						<textarea cols="100" rows="5" name="month3" ></textarea>
+						</td>
+                        
+                      </tr>	
+				<tr valign="middle"><td width="20%" height="30" class="maintext" valign="middle" align="center"><strong>4ος Μήνας</strong></td>
+                        <td width="100%" height="30" class="maintext" valign="middle"> 
+						<textarea cols="100" rows="5" name="month4" ></textarea>
+						</td>
+                        
+                      </tr>	
+			<tr valign="middle"><td width="20%" height="30" class="maintext" valign="middle" align="center"><strong>5ος Μήνας</strong></td>
+                        <td width="100%" height="30" class="maintext" valign="middle"> 
+						<textarea cols="100" rows="5" name="month5" ></textarea>
+						</td>
+                        
+                      </tr>			  
+				</table>
+				
+				 <tr> 
+                  <td height="10"></td>
+                </tr>
+			<tr valign="middle"> 
+			<td   class="maintext"  >Αριθμός προβλεπόμενων επισκέψεων: <input name="episkepseis" type="text" value="" size="5" maxlength="5" >
+                          *</td>
+
+                      </tr>
+					  
+					   <tr> 
+                  <td height="10"></td>
+                </tr>
+			
+                      
+                     
+                      
+                      
+                     
+                       
+<tr> 
+                  <td height="1" bgcolor="#336699" ></td>
+                </tr>
+			<tr> 
+                        <td height="30" class="maintext"></br><strong>Η παρούσα επέχει θέση Υπεύθυνης Δήλωσης του Ν. 1599/86</strong>
+
+                          &nbsp; </td>
+
+                      </tr>
+
+
+                      </tr>
+                    </table></td>
+                </tr>
+                <!-- Πίνακας Προσόντων -->
+                <tr> 
+                  <td height="10"></td>
+                </tr>
+                <tr> 
+                  <td height="10"></td>
+                </tr>
+
+                <tr> 
+                  <td> <table width="100%" cellpadding="0" cellspacing="0">
+                      <tr> 
+                        
+                      </tr>
+                    </td>
+                </tr> 
+</table><table width="100%" cellpadding="0" cellspacing="0">
+                <tr> 
+                  <td height="10"></td>
+                </tr>
+                <tr> 
+                  <td height="1" bgcolor="#336699" ></td>
+                </tr>
+                <tr> 
+                  <td height="10"></td>
+                </tr></table><table width="90%"
+                <tr> 
+                  <td class="maintext">Ο ΕΚΠΑΙΔΕΥΤΙΚΟΣ  
+
+
+                  </td><td class="maintext">Ο ΔΙΕΥΘΥΝΤΗΣ  
+
+
+                  </td>
+                </tr></table>
+                                <tr> 
+                  <td > <table width="60%" cellpadding="0" cellspacing="5" align="center">
+                      <tr> 
+                        <td  height="10" width="30" class="maintext" align="right">&nbsp;</td>
+                        <td> </td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="30" class="maintext">Δηλώνω υπεύθυνα ότι  τα  ανωτέρω στοιχεία είναι ακριβή.</td>
+
+                </tr>
+                <tr> 
+                  <td height="30" align="right" class="maintext">Ημερομηνία προσωρινής υποβολής: 
+                    <strong><?php echo $ap ?></strong>&nbsp;&nbsp;</td>
+                </tr>
+                <!--   Καταχώρηση   -->
+                <tr> 
+                  <td height="10"></td>
+                </tr>
+                <tr> 
+                  <td height="1" bgcolor="#336699" ></td>
+
+                </tr>
+                <tr> 
+                  <td height="10"></td>
+                </tr>
+                <tr> 
+                  <td  align="center"><br> 
+                                        <input type="submit" name="submit"    value="Καταχώρηση"  > 
+                     
+					                       &nbsp;
+										<input type="button" name="arxi" value="Αρχική σελίδα" onClick="window.location.replace('main.php')">
+<!--input type="hidden" name="submit" value="Καταχώρηση"  -->
+                  </td>
+
+</tr>              </table>
+			   </td>
+			</tr>
+			</table>
+	  </td></tr>
+    </table>
+
+            </td>
+        </tr>
+
+</table>
+</form>
+ </td>
+ </tr>
+</table>
+ </body>
+</html>
+
+  </tr>
+
+</tr>
+
+
+
+</table>
+
+</body>
+</html> 

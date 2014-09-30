@@ -1,0 +1,247 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_submission_id}
+			<a href="#" id="addSearchControl_submission_id" class="addSearchControl" {$addSearchControl_submission_id_attrs}>Αρ. Ηλ. Καταχώρησης</a><br>
+		{END addSearch_submission_id}
+		{BEGIN addSearch_programa}
+			<a href="#" id="addSearchControl_programa" class="addSearchControl" {$addSearchControl_programa_attrs}>Τύπος Προγράματος</a><br>
+		{END addSearch_programa}
+		{BEGIN addSearch_date}
+			<a href="#" id="addSearchControl_date" class="addSearchControl" {$addSearchControl_date_attrs}>Ημνια Πρωτλου Σχολείου</a><br>
+		{END addSearch_date}
+		{BEGIN addSearch_ar_protocol}
+			<a href="#" id="addSearchControl_ar_protocol" class="addSearchControl" {$addSearchControl_ar_protocol_attrs}>Αρ. Πρωτλου Σχολείου</a><br>
+		{END addSearch_ar_protocol}
+		{BEGIN addSearch_sxol_etos}
+			<a href="#" id="addSearchControl_sxol_etos" class="addSearchControl" {$addSearchControl_sxol_etos_attrs}>Σχολ. Ετος</a><br>
+		{END addSearch_sxol_etos}
+		{BEGIN addSearch_dide_name}
+			<a href="#" id="addSearchControl_dide_name" class="addSearchControl" {$addSearchControl_dide_name_attrs}>ΔΔΕ Ονομα</a><br>
+		{END addSearch_dide_name}
+		{BEGIN addSearch_sch_name}
+			<a href="#" id="addSearchControl_sch_name" class="addSearchControl" {$addSearchControl_sch_name_attrs}>Σχολείο</a><br>
+		{END addSearch_sch_name}
+		{BEGIN addSearch_tel_ergasias}
+			<a href="#" id="addSearchControl_tel_ergasias" class="addSearchControl" {$addSearchControl_tel_ergasias_attrs}>Τηλ. Σχολείου</a><br>
+		{END addSearch_tel_ergasias}
+		{BEGIN addSearch_dimos}
+			<a href="#" id="addSearchControl_dimos" class="addSearchControl" {$addSearchControl_dimos_attrs}>Δήμος Σχολείου</a><br>
+		{END addSearch_dimos}
+		{BEGIN addSearch_fax}
+			<a href="#" id="addSearchControl_fax" class="addSearchControl" {$addSearchControl_fax_attrs}>Fax</a><br>
+		{END addSearch_fax}
+		{BEGIN addSearch_e_mail}
+			<a href="#" id="addSearchControl_e_mail" class="addSearchControl" {$addSearchControl_e_mail_attrs}>E Mail</a><br>
+		{END addSearch_e_mail}
+		{BEGIN addSearch_sch_teachers}
+			<a href="#" id="addSearchControl_sch_teachers" class="addSearchControl" {$addSearchControl_sch_teachers_attrs}>Αρ. Καθηγητών Σχολείου</a><br>
+		{END addSearch_sch_teachers}
+		{BEGIN addSearch_sch_students}
+			<a href="#" id="addSearchControl_sch_students" class="addSearchControl" {$addSearchControl_sch_students_attrs}>Αρ. Μαθητών Σχολείου</a><br>
+		{END addSearch_sch_students}
+		{BEGIN addSearch_dieythintis_name}
+			<a href="#" id="addSearchControl_dieythintis_name" class="addSearchControl" {$addSearchControl_dieythintis_name_attrs}>Ονομα Διευθυντή</a><br>
+		{END addSearch_dieythintis_name}
+		{BEGIN addSearch_klados_dieythinti}
+			<a href="#" id="addSearchControl_klados_dieythinti" class="addSearchControl" {$addSearchControl_klados_dieythinti_attrs}>Κλάδος Διευθυντή</a><br>
+		{END addSearch_klados_dieythinti}
+		{BEGIN addSearch_program_title}
+			<a href="#" id="addSearchControl_program_title" class="addSearchControl" {$addSearchControl_program_title_attrs}>Τίτλος Προγράμματος</a><br>
+		{END addSearch_program_title}
+		{BEGIN addSearch_ar_praksis}
+			<a href="#" id="addSearchControl_ar_praksis" class="addSearchControl" {$addSearchControl_ar_praksis_attrs}>Αρ. Πράξης Συλλόγου</a><br>
+		{END addSearch_ar_praksis}
+		{BEGIN addSearch_date_praksis}
+			<a href="#" id="addSearchControl_date_praksis" class="addSearchControl" {$addSearchControl_date_praksis_attrs}>Ημνια Πράξης Συλλόγου</a><br>
+		{END addSearch_date_praksis}
+		{BEGIN addSearch_sch_orario}
+			<a href="#" id="addSearchControl_sch_orario" class="addSearchControl" {$addSearchControl_sch_orario_attrs}>Ωράριο Σχολείου</a><br>
+		{END addSearch_sch_orario}
+		{BEGIN addSearch_ypeythinos_name}
+			<a href="#" id="addSearchControl_ypeythinos_name" class="addSearchControl" {$addSearchControl_ypeythinos_name_attrs}>Όνομα Υπευθύνου</a><br>
+		{END addSearch_ypeythinos_name}
+		{BEGIN addSearch_ypeythinos_amm}
+			<a href="#" id="addSearchControl_ypeythinos_amm" class="addSearchControl" {$addSearchControl_ypeythinos_amm_attrs}>ΑΦΜ Υπευθύνου</a><br>
+		{END addSearch_ypeythinos_amm}
+		{BEGIN addSearch_ypeythinos_klados}
+			<a href="#" id="addSearchControl_ypeythinos_klados" class="addSearchControl" {$addSearchControl_ypeythinos_klados_attrs}>Κλάδος Υπευθύνου</a><br>
+		{END addSearch_ypeythinos_klados}
+		{BEGIN addSearch_ypeythinos_wres}
+			<a href="#" id="addSearchControl_ypeythinos_wres" class="addSearchControl" {$addSearchControl_ypeythinos_wres_attrs}>Ώρες Υπευθύνου</a><br>
+		{END addSearch_ypeythinos_wres}
+		{BEGIN addSearch_ypeythinos_again}
+			<a href="#" id="addSearchControl_ypeythinos_again" class="addSearchControl" {$addSearchControl_ypeythinos_again_attrs}>Υπεύθυνος ξανά</a><br>
+		{END addSearch_ypeythinos_again}
+		{BEGIN addSearch_ypeythinos_epimorfosi}
+			<a href="#" id="addSearchControl_ypeythinos_epimorfosi" class="addSearchControl" {$addSearchControl_ypeythinos_epimorfosi_attrs}>Επιμόρφωση Υπευθύνου</a><br>
+		{END addSearch_ypeythinos_epimorfosi}
+		{BEGIN addSearch_symetexwn1_name}
+			<a href="#" id="addSearchControl_symetexwn1_name" class="addSearchControl" {$addSearchControl_symetexwn1_name_attrs}>Όνομα Συμμετέχων1</a><br>
+		{END addSearch_symetexwn1_name}
+		{BEGIN addSearch_symetexwn1_amm}
+			<a href="#" id="addSearchControl_symetexwn1_amm" class="addSearchControl" {$addSearchControl_symetexwn1_amm_attrs}>ΑΦΜ Συμμετέχων1</a><br>
+		{END addSearch_symetexwn1_amm}
+		{BEGIN addSearch_symetexwn1_klados}
+			<a href="#" id="addSearchControl_symetexwn1_klados" class="addSearchControl" {$addSearchControl_symetexwn1_klados_attrs}>Κλάδος Συμμετέχων1</a><br>
+		{END addSearch_symetexwn1_klados}
+		{BEGIN addSearch_symetexwn1_wres}
+			<a href="#" id="addSearchControl_symetexwn1_wres" class="addSearchControl" {$addSearchControl_symetexwn1_wres_attrs}>Ώρες Συμμετέχων1</a><br>
+		{END addSearch_symetexwn1_wres}
+		{BEGIN addSearch_symetexwn1_again}
+			<a href="#" id="addSearchControl_symetexwn1_again" class="addSearchControl" {$addSearchControl_symetexwn1_again_attrs}>Συμμετέχων1 ξανά</a><br>
+		{END addSearch_symetexwn1_again}
+		{BEGIN addSearch_symetexwn1_epimorfosi}
+			<a href="#" id="addSearchControl_symetexwn1_epimorfosi" class="addSearchControl" {$addSearchControl_symetexwn1_epimorfosi_attrs}>Επιμόρφωση Συμμετέχων1</a><br>
+		{END addSearch_symetexwn1_epimorfosi}
+		{BEGIN addSearch_symetexwn2_name}
+			<a href="#" id="addSearchControl_symetexwn2_name" class="addSearchControl" {$addSearchControl_symetexwn2_name_attrs}>Όνομα Συμμετέχων2</a><br>
+		{END addSearch_symetexwn2_name}
+		{BEGIN addSearch_symetexwn2_amm}
+			<a href="#" id="addSearchControl_symetexwn2_amm" class="addSearchControl" {$addSearchControl_symetexwn2_amm_attrs}>ΑΦΜ Συμμετέχων2</a><br>
+		{END addSearch_symetexwn2_amm}
+		{BEGIN addSearch_symetexwn2_klados}
+			<a href="#" id="addSearchControl_symetexwn2_klados" class="addSearchControl" {$addSearchControl_symetexwn2_klados_attrs}>Κλάδος Συμμετέχων2</a><br>
+		{END addSearch_symetexwn2_klados}
+		{BEGIN addSearch_symetexwn2_wres}
+			<a href="#" id="addSearchControl_symetexwn2_wres" class="addSearchControl" {$addSearchControl_symetexwn2_wres_attrs}>Ώρες Συμμετέχων2</a><br>
+		{END addSearch_symetexwn2_wres}
+		{BEGIN addSearch_symetexwn2_again}
+			<a href="#" id="addSearchControl_symetexwn2_again" class="addSearchControl" {$addSearchControl_symetexwn2_again_attrs}>Συμμετέχων2 ξανά</a><br>
+		{END addSearch_symetexwn2_again}
+		{BEGIN addSearch_symetexwn2_epimorfosi}
+			<a href="#" id="addSearchControl_symetexwn2_epimorfosi" class="addSearchControl" {$addSearchControl_symetexwn2_epimorfosi_attrs}>Επιμόρφωση Συμμετέχων2</a><br>
+		{END addSearch_symetexwn2_epimorfosi}
+		{BEGIN addSearch_symetexwn3_name}
+			<a href="#" id="addSearchControl_symetexwn3_name" class="addSearchControl" {$addSearchControl_symetexwn3_name_attrs}>Όνομα Συμμετέχων3</a><br>
+		{END addSearch_symetexwn3_name}
+		{BEGIN addSearch_symetexwn3_amm}
+			<a href="#" id="addSearchControl_symetexwn3_amm" class="addSearchControl" {$addSearchControl_symetexwn3_amm_attrs}>ΑΦΜ Συμμετέχων3</a><br>
+		{END addSearch_symetexwn3_amm}
+		{BEGIN addSearch_symetexwn3_klados}
+			<a href="#" id="addSearchControl_symetexwn3_klados" class="addSearchControl" {$addSearchControl_symetexwn3_klados_attrs}>Κλάδος Συμμετέχων3</a><br>
+		{END addSearch_symetexwn3_klados}
+		{BEGIN addSearch_symetexwn3_wres}
+			<a href="#" id="addSearchControl_symetexwn3_wres" class="addSearchControl" {$addSearchControl_symetexwn3_wres_attrs}>Ώρες Συμμετέχων3</a><br>
+		{END addSearch_symetexwn3_wres}
+		{BEGIN addSearch_symetexwn3_again}
+			<a href="#" id="addSearchControl_symetexwn3_again" class="addSearchControl" {$addSearchControl_symetexwn3_again_attrs}>Συμμετέχων3 ξανά</a><br>
+		{END addSearch_symetexwn3_again}
+		{BEGIN addSearch_symetexwn3_epimorfosi}
+			<a href="#" id="addSearchControl_symetexwn3_epimorfosi" class="addSearchControl" {$addSearchControl_symetexwn3_epimorfosi_attrs}>Επιμόρφωση Συμμετέχων3</a><br>
+		{END addSearch_symetexwn3_epimorfosi}
+		{BEGIN addSearch_mathites_synolo}
+			<a href="#" id="addSearchControl_mathites_synolo" class="addSearchControl" {$addSearchControl_mathites_synolo_attrs}>Σύνολο Μαθητές Ομάδας</a><br>
+		{END addSearch_mathites_synolo}
+		{BEGIN addSearch_agoria}
+			<a href="#" id="addSearchControl_agoria" class="addSearchControl" {$addSearchControl_agoria_attrs}>Αγόρια</a><br>
+		{END addSearch_agoria}
+		{BEGIN addSearch_koritsia}
+			<a href="#" id="addSearchControl_koritsia" class="addSearchControl" {$addSearchControl_koritsia_attrs}>Κορίτσια</a><br>
+		{END addSearch_koritsia}
+		{BEGIN addSearch_amiges}
+			<a href="#" id="addSearchControl_amiges" class="addSearchControl" {$addSearchControl_amiges_attrs}>Σύνθεση Ομάδας</a><br>
+		{END addSearch_amiges}
+		{BEGIN addSearch_meet_day}
+			<a href="#" id="addSearchControl_meet_day" class="addSearchControl" {$addSearchControl_meet_day_attrs}>Ημέρα/ες Συνάντησης</a><br>
+		{END addSearch_meet_day}
+		{BEGIN addSearch_meet_hour}
+			<a href="#" id="addSearchControl_meet_hour" class="addSearchControl" {$addSearchControl_meet_hour_attrs}>Ώρα/ες Συνάντησης</a><br>
+		{END addSearch_meet_hour}
+		{BEGIN addSearch_meet_place}
+			<a href="#" id="addSearchControl_meet_place" class="addSearchControl" {$addSearchControl_meet_place_attrs}>Τόπος Συνάντησης</a><br>
+		{END addSearch_meet_place}
+		{BEGIN addSearch_arxeio}
+			<a href="#" id="addSearchControl_arxeio" class="addSearchControl" {$addSearchControl_arxeio_attrs}>Υπάρχει Αρχείο </a><br>
+		{END addSearch_arxeio}
+		{BEGIN addSearch_ypothemata}
+			<a href="#" id="addSearchControl_ypothemata" class="addSearchControl" {$addSearchControl_ypothemata_attrs}>Υποθέματα</a><br>
+		{END addSearch_ypothemata}
+		{BEGIN addSearch_stoxoi}
+			<a href="#" id="addSearchControl_stoxoi" class="addSearchControl" {$addSearchControl_stoxoi_attrs}>Στόχοι</a><br>
+		{END addSearch_stoxoi}
+		{BEGIN addSearch_methodologia}
+			<a href="#" id="addSearchControl_methodologia" class="addSearchControl" {$addSearchControl_methodologia_attrs}>Μεθοδολογία</a><br>
+		{END addSearch_methodologia}
+		{BEGIN addSearch_syndeseis}
+			<a href="#" id="addSearchControl_syndeseis" class="addSearchControl" {$addSearchControl_syndeseis_attrs}>Συνδέσεις</a><br>
+		{END addSearch_syndeseis}
+		{BEGIN addSearch_month1}
+			<a href="#" id="addSearchControl_month1" class="addSearchControl" {$addSearchControl_month1_attrs}>Μήνας 1</a><br>
+		{END addSearch_month1}
+		{BEGIN addSearch_month2}
+			<a href="#" id="addSearchControl_month2" class="addSearchControl" {$addSearchControl_month2_attrs}>Μήνας 2</a><br>
+		{END addSearch_month2}
+		{BEGIN addSearch_month3}
+			<a href="#" id="addSearchControl_month3" class="addSearchControl" {$addSearchControl_month3_attrs}>Μήνας 3</a><br>
+		{END addSearch_month3}
+		{BEGIN addSearch_month4}
+			<a href="#" id="addSearchControl_month4" class="addSearchControl" {$addSearchControl_month4_attrs}>Μήνας 4</a><br>
+		{END addSearch_month4}
+		{BEGIN addSearch_month5}
+			<a href="#" id="addSearchControl_month5" class="addSearchControl" {$addSearchControl_month5_attrs}>Μήνας 5</a><br>
+		{END addSearch_month5}
+		{BEGIN addSearch_episkepseis}
+			<a href="#" id="addSearchControl_episkepseis" class="addSearchControl" {$addSearchControl_episkepseis_attrs}>Αρ. Επισκέψεων</a><br>
+		{END addSearch_episkepseis}
+		{BEGIN addSearch_submission_date}
+			<a href="#" id="addSearchControl_submission_date" class="addSearchControl" {$addSearchControl_submission_date_attrs}>Ημερομηνία Υποβολής Αιτησης</a><br>
+		{END addSearch_submission_date}
+		{BEGIN addSearch_last_modified_date}
+			<a href="#" id="addSearchControl_last_modified_date" class="addSearchControl" {$addSearchControl_last_modified_date_attrs}>Last Modified Date</a><br>
+		{END addSearch_last_modified_date}
+		{BEGIN addSearch_ip_address}
+			<a href="#" id="addSearchControl_ip_address" class="addSearchControl" {$addSearchControl_ip_address_attrs}>Ip Address</a><br>
+		{END addSearch_ip_address}
+		{BEGIN addSearch_is_finalized}
+			<a href="#" id="addSearchControl_is_finalized" class="addSearchControl" {$addSearchControl_is_finalized_attrs}>Διακοπή Προγράμματος</a><br>
+		{END addSearch_is_finalized}
+		{BEGIN addSearch_sch_id}
+			<a href="#" id="addSearchControl_sch_id" class="addSearchControl" {$addSearchControl_sch_id_attrs}>sch_id</a><br>
+		{END addSearch_sch_id}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

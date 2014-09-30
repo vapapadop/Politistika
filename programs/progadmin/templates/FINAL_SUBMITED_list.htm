@@ -1,0 +1,372 @@
+<!DOCTYPE html><HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META content=IE=7 http-equiv=X-UA-Compatible>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN rtlCSS}<LINK rel=stylesheet type=text/css href="styles/defaultRTL.css">{END rtlCSS}{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
+<META name=GENERATOR content="MSHTML 8.00.6001.23520"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
+<TABLE class=runner-toptable cellPadding=0><TR class=runner-header><TD class=runner-top colSpan=3>{BEGIN container_toplinks}<TABLE class="runner-c runner-c-toplinks" cellPadding=0><TR class="{$cheaderclass_toplinks}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR>{BEGIN security_block}<TD class="runner-cc runner-bl runner-b-loggedas" {$brickclass_loggedas}><SPAN>{BEGIN loggedas_message}<SPAN>Logged on as&nbsp;<B>{$username}</B>&nbsp;</SPAN> {END loggedas_message}{BEGIN guestloginbutton}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$guestloginlink_attrs}>Login</A> </SPAN>{END guestloginbutton}{BEGIN logoutbutton}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$logoutlink_attrs}>Log out</A> 
+                  </SPAN>{END logoutbutton}</SPAN></TD>
+                {END security_block}{BEGIN asearch_link}<TD class="runner-cc runner-bl runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><SPAN><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$advsearchlink_attrs}>Advanced 
+                  search</A> </SPAN></SPAN></TD>
+                {END asearch_link}{BEGIN export_link}<TD class="runner-cc runner-bl runner-b-toplinks_export" {$brickclass_toplinks_export}><SPAN><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="ft_form_4_export.php" target=_blank {$exportlink_attrs}>Export results</A> </SPAN></SPAN></TD>
+                {END export_link}{BEGIN prints_block}<TD class="runner-cc runner-bl runner-b-toplinks_print" {$brickclass_toplinks_print}><SPAN>{BEGIN print_link}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$printlink_attrs}>Print this 
+                  page</A> </SPAN>{END print_link}{BEGIN printall_link}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$printalllink_attrs}>Print all pages</A> 
+                </SPAN>{END printall_link}</SPAN></TD>
+                {END prints_block}<TD class="runner-cc filler"></TD></TR></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_toplinks}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_toplinks}</TD></TR>
+  <TR class=runner-body><TD class="runner-left {$blockclass_left}">{BEGIN container_left}<TABLE class="runner-c runner-c-left" cellPadding=0><TR class="{$cheaderclass_left}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        {BEGIN menu_block}{$mainmenu}{END menu_block}{BEGIN searchform_block}<TR class="runner-row style1 runner-b-vsearch1 {$brickclass_vsearch1}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents">
+            Search for: {BEGIN searchPanelTopButtons}<SPAN><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A id=showSrchWin{$id} class=runner-button-img href="#" {$showHideSearchWin_attrs}><IMG src="images/search/showWindowPin.gif"></A> </SPAN>&nbsp; <SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A id=showOptPanel{$id} class=runner-button-img href="#" {$showHideSearchPanel_attrs}><IMG src="images/search/showOptions.gif"></A> </SPAN></SPAN>{END searchPanelTopButtons}</TD>
+          <TD class=runner-cr></TD></TR>
+        {END searchform_block}{BEGIN searchform_block}<TR class="runner-row style1 runner-b-vsearch2 {$brickclass_vsearch2}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents"><DIV><SPAN>{BEGIN searchform_text}<INPUT size=25 {$searchfor_attrs}>{END searchform_text} &nbsp; 
+            {BEGIN searchform_search}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button-img href="#" {$searchbutton_attrs}><IMG src="images/search/search.gif"></A> </SPAN>{END searchform_search}&nbsp; {BEGIN searchform_showall}<SPAN class=runner-btnframe {$showAllCont_attrs}><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$showallbutton_attrs}>Show all</A> </SPAN>{END searchform_showall}</SPAN></DIV></TD>
+          <TD class=runner-cr></TD></TR>
+        {END searchform_block}{BEGIN details_block}<TR class="runner-row style2 runner-b-vdetails_found {$brickclass_vdetails_found}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents"><SPAN 
+            {$details_attrs}>Details found: <SPAN 
+            class=runner-details_found_count>{$records_found}</SPAN></SPAN></TD>
+          <TD class=runner-cr></TD></TR>
+        {END details_block}{BEGIN pages_block}<TR class="runner-row style1 runner-b-vpage_of {$brickclass_vpage_of}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents"><SPAN id=pages_block{$id}><SPAN {$pages_attrs}>Page 
+            {$page} of {$maxpages}</SPAN> 
+            </SPAN></TD>
+          <TD class=runner-cr></TD></TR>
+        {END pages_block}{BEGIN recordspp_block}<TR class="runner-row style1 runner-b-vrecsperpage {$brickclass_vrecsperpage}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents"><SPAN id=recordspp_block{$id} name="recordspp_block{$id}">Records Per Page:&nbsp;{$recsPerPage} 
+            </SPAN></TD>
+          <TD class=runner-cr></TD></TR>
+        {END recordspp_block}{BEGIN searchPanel}<TR class="runner-row style1 runner-b-searchpanel {$brickclass_searchpanel}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents"><DIV class=searchPanelContainer>{$adv_search_panel} 
+            </DIV></TD>
+          <TD class=runner-cr></TD></TR>
+        {END searchPanel}<TR class="{$cfooterclass_left}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_left}</TD>
+    <TD class="runner-center {$blockclass_center}">{BEGIN container_bigblock}<TABLE class="runner-c runner-c-bigblock" border=1 rules=all cellSpacing=2 
+      cellPadding=1><TR class="{$cheaderclass_bigblock}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR 
+        class="runner-row style2 runner-b-wrapper {$wrapperclass_recordcontrols}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents runner-wrapper">{BEGIN container_recordcontrols}<TABLE class="runner-c runner-c-recordcontrols" cellPadding=0><TR class="{$cheaderclass_recordcontrols}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl></TD>
+                <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR>{BEGIN record_controls_block}<TD class="runner-cc runner-bl runner-b-recordcontrol" {$brickclass_recordcontrol}><SPAN>{BEGIN deleteselected_link}<SPAN class=runner-btnframe {$deleteselectedlink_span}><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$deleteselectedlink_attrs}>Delete selected</A> 
+                        </SPAN>{END deleteselected_link}{BEGIN exportselected_link}<SPAN class=runner-btnframe {$exportselectedlink_span}><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$exportselectedlink_attrs}>Export selected</A> 
+                        </SPAN>{END exportselected_link}{BEGIN printselected_link}<SPAN class=runner-btnframe {$printselectedlink_span}><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$printselectedlink_attrs}>Print selected</A> 
+                        </SPAN>{END printselected_link}</SPAN></TD>
+                      {END record_controls_block}<TD class="runner-cc filler"></TD></TR></TABLE></TD>
+                <TD class=runner-cr></TD></TR>
+              <TR class="{$cfooterclass_recordcontrols}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_recordcontrols}</TD>
+          <TD class=runner-cr></TD></TR>
+        <TR 
+          class="runner-row style2 runner-b-wrapper {$wrapperclass_message}"><TD 
+          class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents runner-wrapper">{BEGIN container_message}<TABLE class="runner-c runner-c-message" cellPadding=0><TR class="{$cheaderclass_message}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl></TD>
+                <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR>{BEGIN message_block}<TD class="runner-cc runner-bc runner-b-message" {$brickclass_message}><SPAN><DIV class=runner-message>{$message}</DIV></SPAN></TD>{END message_block}</TR></TABLE></TD>
+                <TD class=runner-cr></TD></TR>
+              <TR class="{$cfooterclass_message}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_message}</TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="runner-row style2 runner-b-wrapper {$wrapperclass_grid}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents runner-wrapper">{BEGIN container_grid}{BEGIN grid_block}<TABLE style="WIDTH: 8942px" class="runner-c runner-c-grid runner-b-grid" border=1 rules=all cellSpacing=2 cellPadding=0><THEAD>{BEGIN grid_header}<TR class="runner-toprow style1 {$gridHeader_class}">{BEGIN record_header}<TH style="WIDTH: 5px" class=runner-cl><IMG src="images/spacer.gif"></TH>
+                {BEGIN listIcons_column}<TH style="WIDTH: 71px" class=runner-cc iEditCont="all"></TH>
+                {END listIcons_column}{BEGIN checkbox_column}<TH style="WIDTH: 21px" class="runner-cc runner-bc"><INPUT type=checkbox 
+                  {$checkboxheader_attrs}></TH>
+                {END checkbox_column}{BEGIN submited_fieldheadercolumn}<th class="runner-cc ">{BEGIN submited_fieldheader}<a {$submited_orderlinkattrs}>
+											Submited
+										</a>
+									{END submited_fieldheader}
+									</th>
+									{END submited_fieldheadercolumn}
+
+																	{BEGIN sch_id1_fieldheadercolumn}<th class="runner-cc ">{BEGIN sch_id1_fieldheader}<a {$sch_id1_orderlinkattrs}>
+											Sch Id1
+										</a>
+									{END sch_id1_fieldheader}
+									</th>
+									{END sch_id1_fieldheadercolumn}
+
+																	{BEGIN submission_id_fieldheadercolumn}<TH style="WIDTH: 123px" class="runner-cc ">{BEGIN submission_id_fieldheader}<A {$submission_id_orderlinkattrs}>Αρ. Ηλ. 
+                  Καταχώρησης 
+                  </A>{END submission_id_fieldheader}</TH>
+                {END submission_id_fieldheadercolumn}{BEGIN programa_fieldheadercolumn}<TH style="WIDTH: 99px" class="runner-cc ">{BEGIN programa_fieldheader}<A {$programa_orderlinkattrs}>Τύπος Προγράματος </A>{END programa_fieldheader}</TH>
+                {END programa_fieldheadercolumn}{BEGIN date_fieldheadercolumn}<TH style="WIDTH: 68px" class="runner-cc ">{BEGIN date_fieldheader}<A {$date_orderlinkattrs}>Ημνια Πρωτλου Σχολείου </A>{END date_fieldheader}</TH>
+                {END date_fieldheadercolumn}{BEGIN ar_protocol_fieldheadercolumn}<TH style="WIDTH: 108px" class="runner-cc ">{BEGIN ar_protocol_fieldheader}<A {$ar_protocol_orderlinkattrs}>Αρ. Πρωτλου Σχολείου 
+                </A>{END ar_protocol_fieldheader}</TH>
+                {END ar_protocol_fieldheadercolumn}{BEGIN sxol_etos_fieldheadercolumn}<TH style="WIDTH: 97px" class="runner-cc ">{BEGIN sxol_etos_fieldheader}<A {$sxol_etos_orderlinkattrs}>Σχολ. Ετος </A>{END sxol_etos_fieldheader}</TH>
+                {END sxol_etos_fieldheadercolumn}{BEGIN dide_name_fieldheadercolumn}<TH style="WIDTH: 106px" class="runner-cc ">{BEGIN dide_name_fieldheader}<A {$dide_name_orderlinkattrs}>ΔΔΕ Ονομα </A>{END dide_name_fieldheader}</TH>
+                {END dide_name_fieldheadercolumn}{BEGIN sch_name_fieldheadercolumn}<TH style="WIDTH: 101px" class="runner-cc ">{BEGIN sch_name_fieldheader}<A {$sch_name_orderlinkattrs}>Σχολείο </A>{END sch_name_fieldheader}</TH>
+                {END sch_name_fieldheadercolumn}{BEGIN tel_ergasias_fieldheadercolumn}<TH style="WIDTH: 112px" class="runner-cc ">{BEGIN tel_ergasias_fieldheader}<A {$tel_ergasias_orderlinkattrs}>Τηλ. Σχολείου </A>{END tel_ergasias_fieldheader}</TH>
+                {END tel_ergasias_fieldheadercolumn}{BEGIN dimos_fieldheadercolumn}<TH style="WIDTH: 77px" class="runner-cc ">{BEGIN dimos_fieldheader}<A {$dimos_orderlinkattrs}>Δήμος Σχολείου </A>{END dimos_fieldheader}</TH>
+                {END dimos_fieldheadercolumn}{BEGIN fax_fieldheadercolumn}<TH style="WIDTH: 61px" class="runner-cc ">{BEGIN fax_fieldheader}<A {$fax_orderlinkattrs}>Fax </A>{END fax_fieldheader}</TH>
+                {END fax_fieldheadercolumn}{BEGIN e_mail_fieldheadercolumn}<TH style="WIDTH: 81px" class="runner-cc ">{BEGIN e_mail_fieldheader}<A {$e_mail_orderlinkattrs}>E Mail </A>{END e_mail_fieldheader}</TH>
+                {END e_mail_fieldheadercolumn}{BEGIN sch_teachers_fieldheadercolumn}<TH style="WIDTH: 118px" class="runner-cc ">{BEGIN sch_teachers_fieldheader}<A {$sch_teachers_orderlinkattrs}>Αρ. Καθηγητών Σχολείου 
+                  </A>{END sch_teachers_fieldheader}</TH>
+                {END sch_teachers_fieldheadercolumn}{BEGIN sch_students_fieldheadercolumn}<TH style="WIDTH: 117px" class="runner-cc ">{BEGIN sch_students_fieldheader}<A {$sch_students_orderlinkattrs}>Αρ. Μαθητών Σχολείου 
+                </A>{END sch_students_fieldheader}</TH>
+                {END sch_students_fieldheadercolumn}{BEGIN dieythintis_name_fieldheadercolumn}<TH style="WIDTH: 140px" class="runner-cc ">{BEGIN dieythintis_name_fieldheader}<A {$dieythintis_name_orderlinkattrs}>Ονομα Διευθυντή 
+                </A>{END dieythintis_name_fieldheader}</TH>
+                {END dieythintis_name_fieldheadercolumn}{BEGIN klados_dieythinti_fieldheadercolumn}<TH style="WIDTH: 139px" class="runner-cc ">{BEGIN klados_dieythinti_fieldheader}<A {$klados_dieythinti_orderlinkattrs}>Κλάδος Διευθυντή 
+                </A>{END klados_dieythinti_fieldheader}</TH>
+                {END klados_dieythinti_fieldheadercolumn}{BEGIN program_title_fieldheadercolumn}<TH style="WIDTH: 120px" class="runner-cc ">{BEGIN program_title_fieldheader}<A {$program_title_orderlinkattrs}>Τίτλος Προγράμματος 
+                </A>{END program_title_fieldheader}</TH>
+                {END program_title_fieldheadercolumn}{BEGIN ar_praksis_fieldheadercolumn}<TH style="WIDTH: 103px" class="runner-cc ">{BEGIN ar_praksis_fieldheader}<A {$ar_praksis_orderlinkattrs}>Αρ. Πράξης Συλλόγου </A>{END ar_praksis_fieldheader}</TH>
+                {END ar_praksis_fieldheadercolumn}{BEGIN date_praksis_fieldheadercolumn}<TH style="WIDTH: 116px" class="runner-cc ">{BEGIN date_praksis_fieldheader}<A {$date_praksis_orderlinkattrs}>Ημνια Πράξης Συλλόγου 
+                </A>{END date_praksis_fieldheader}</TH>
+                {END date_praksis_fieldheadercolumn}{BEGIN sch_orario_fieldheadercolumn}<TH style="WIDTH: 103px" class="runner-cc ">{BEGIN sch_orario_fieldheader}<A {$sch_orario_orderlinkattrs}>Ωράριο Σχολείου </A>{END sch_orario_fieldheader}</TH>
+                {END sch_orario_fieldheadercolumn}{BEGIN ypeythinos_name_fieldheadercolumn}<TH style="WIDTH: 144px" class="runner-cc ">{BEGIN ypeythinos_name_fieldheader}<A {$ypeythinos_name_orderlinkattrs}>Όνομα Υπευθύνου 
+</A>{END ypeythinos_name_fieldheader}</TH>
+                {END ypeythinos_name_fieldheadercolumn}{BEGIN ypeythinos_amm_fieldheadercolumn}<TH style="WIDTH: 141px" class="runner-cc ">{BEGIN ypeythinos_amm_fieldheader}<A {$ypeythinos_amm_orderlinkattrs}>ΑΦΜ Υπευθύνου </A>{END ypeythinos_amm_fieldheader}</TH>
+                {END ypeythinos_amm_fieldheadercolumn}{BEGIN ypeythinos_klados_fieldheadercolumn}<TH style="WIDTH: 149px" class="runner-cc ">{BEGIN ypeythinos_klados_fieldheader}<A {$ypeythinos_klados_orderlinkattrs}>Κλάδος Υπευθύνου 
+                </A>{END ypeythinos_klados_fieldheader}</TH>
+                {END ypeythinos_klados_fieldheadercolumn}{BEGIN ypeythinos_wres_fieldheadercolumn}<TH style="WIDTH: 139px" class="runner-cc ">{BEGIN ypeythinos_wres_fieldheader}<A {$ypeythinos_wres_orderlinkattrs}>Ώρες Υπευθύνου </A>{END ypeythinos_wres_fieldheader}</TH>
+                {END ypeythinos_wres_fieldheadercolumn}{BEGIN ypeythinos_again_fieldheadercolumn}<TH style="WIDTH: 143px" class="runner-cc ">{BEGIN ypeythinos_again_fieldheader}<A {$ypeythinos_again_orderlinkattrs}>Υπεύθυνος ξανά 
+</A>{END ypeythinos_again_fieldheader}</TH>
+                {END ypeythinos_again_fieldheadercolumn}{BEGIN ypeythinos_epimorfosi_fieldheadercolumn}<TH style="WIDTH: 172px" class="runner-cc ">{BEGIN ypeythinos_epimorfosi_fieldheader}<A {$ypeythinos_epimorfosi_orderlinkattrs}>Επιμόρφωση Υπευθύνου 
+                  </A>{END ypeythinos_epimorfosi_fieldheader}</TH>
+                {END ypeythinos_epimorfosi_fieldheadercolumn}{BEGIN symetexwn1_name_fieldheadercolumn}<TH style="WIDTH: 154px" class="runner-cc ">{BEGIN symetexwn1_name_fieldheader}<A {$symetexwn1_name_orderlinkattrs}>Όνομα Συμμετέχων1 
+                </A>{END symetexwn1_name_fieldheader}</TH>
+                {END symetexwn1_name_fieldheadercolumn}{BEGIN symetexwn1_amm_fieldheadercolumn}<TH style="WIDTH: 151px" class="runner-cc ">{BEGIN symetexwn1_amm_fieldheader}<A {$symetexwn1_amm_orderlinkattrs}>ΑΦΜ Συμμετέχων1 </A>{END symetexwn1_amm_fieldheader}</TH>
+                {END symetexwn1_amm_fieldheadercolumn}{BEGIN symetexwn1_klados_fieldheadercolumn}<TH style="WIDTH: 159px" class="runner-cc ">{BEGIN symetexwn1_klados_fieldheader}<A {$symetexwn1_klados_orderlinkattrs}>Κλάδος Συμμετέχων1 
+                  </A>{END symetexwn1_klados_fieldheader}</TH>
+                {END symetexwn1_klados_fieldheadercolumn}{BEGIN symetexwn1_wres_fieldheadercolumn}<TH style="WIDTH: 149px" class="runner-cc ">{BEGIN symetexwn1_wres_fieldheader}<A {$symetexwn1_wres_orderlinkattrs}>Ώρες Συμμετέχων1 
+                </A>{END symetexwn1_wres_fieldheader}</TH>
+                {END symetexwn1_wres_fieldheadercolumn}{BEGIN symetexwn1_again_fieldheadercolumn}<TH style="WIDTH: 153px" class="runner-cc ">{BEGIN symetexwn1_again_fieldheader}<A {$symetexwn1_again_orderlinkattrs}>Συμμετέχων1 ξανά 
+                </A>{END symetexwn1_again_fieldheader}</TH>
+                {END symetexwn1_again_fieldheadercolumn}{BEGIN symetexwn1_epimorfosi_fieldheadercolumn}<TH style="WIDTH: 182px" class="runner-cc ">{BEGIN symetexwn1_epimorfosi_fieldheader}<A {$symetexwn1_epimorfosi_orderlinkattrs}>Επιμόρφωση Συμμετέχων1 
+                  </A>{END symetexwn1_epimorfosi_fieldheader}</TH>
+                {END symetexwn1_epimorfosi_fieldheadercolumn}{BEGIN symetexwn2_name_fieldheadercolumn}<TH style="WIDTH: 154px" class="runner-cc ">{BEGIN symetexwn2_name_fieldheader}<A {$symetexwn2_name_orderlinkattrs}>Όνομα Συμμετέχων2 
+                </A>{END symetexwn2_name_fieldheader}</TH>
+                {END symetexwn2_name_fieldheadercolumn}{BEGIN symetexwn2_amm_fieldheadercolumn}<TH style="WIDTH: 151px" class="runner-cc ">{BEGIN symetexwn2_amm_fieldheader}<A {$symetexwn2_amm_orderlinkattrs}>ΑΦΜ Συμμετέχων2 </A>{END symetexwn2_amm_fieldheader}</TH>
+                {END symetexwn2_amm_fieldheadercolumn}{BEGIN symetexwn2_klados_fieldheadercolumn}<TH style="WIDTH: 159px" class="runner-cc ">{BEGIN symetexwn2_klados_fieldheader}<A {$symetexwn2_klados_orderlinkattrs}>Κλάδος Συμμετέχων2 
+                  </A>{END symetexwn2_klados_fieldheader}</TH>
+                {END symetexwn2_klados_fieldheadercolumn}{BEGIN symetexwn2_wres_fieldheadercolumn}<TH style="WIDTH: 149px" class="runner-cc ">{BEGIN symetexwn2_wres_fieldheader}<A {$symetexwn2_wres_orderlinkattrs}>Ώρες Συμμετέχων2 
+                </A>{END symetexwn2_wres_fieldheader}</TH>
+                {END symetexwn2_wres_fieldheadercolumn}{BEGIN symetexwn2_again_fieldheadercolumn}<TH style="WIDTH: 153px" class="runner-cc ">{BEGIN symetexwn2_again_fieldheader}<A {$symetexwn2_again_orderlinkattrs}>Συμμετέχων2 ξανά 
+                </A>{END symetexwn2_again_fieldheader}</TH>
+                {END symetexwn2_again_fieldheadercolumn}{BEGIN symetexwn2_epimorfosi_fieldheadercolumn}<TH style="WIDTH: 182px" class="runner-cc ">{BEGIN symetexwn2_epimorfosi_fieldheader}<A {$symetexwn2_epimorfosi_orderlinkattrs}>Επιμόρφωση Συμμετέχων2 
+                  </A>{END symetexwn2_epimorfosi_fieldheader}</TH>
+                {END symetexwn2_epimorfosi_fieldheadercolumn}{BEGIN symetexwn3_name_fieldheadercolumn}<TH style="WIDTH: 154px" class="runner-cc ">{BEGIN symetexwn3_name_fieldheader}<A {$symetexwn3_name_orderlinkattrs}>Όνομα Συμμετέχων3 
+                </A>{END symetexwn3_name_fieldheader}</TH>
+                {END symetexwn3_name_fieldheadercolumn}{BEGIN symetexwn3_amm_fieldheadercolumn}<TH style="WIDTH: 151px" class="runner-cc ">{BEGIN symetexwn3_amm_fieldheader}<A {$symetexwn3_amm_orderlinkattrs}>ΑΦΜ Συμμετέχων3 </A>{END symetexwn3_amm_fieldheader}</TH>
+                {END symetexwn3_amm_fieldheadercolumn}{BEGIN symetexwn3_klados_fieldheadercolumn}<TH style="WIDTH: 159px" class="runner-cc ">{BEGIN symetexwn3_klados_fieldheader}<A {$symetexwn3_klados_orderlinkattrs}>Κλάδος Συμμετέχων3 
+                  </A>{END symetexwn3_klados_fieldheader}</TH>
+                {END symetexwn3_klados_fieldheadercolumn}{BEGIN symetexwn3_wres_fieldheadercolumn}<TH style="WIDTH: 149px" class="runner-cc ">{BEGIN symetexwn3_wres_fieldheader}<A {$symetexwn3_wres_orderlinkattrs}>Ώρες Συμμετέχων3 
+                </A>{END symetexwn3_wres_fieldheader}</TH>
+                {END symetexwn3_wres_fieldheadercolumn}{BEGIN symetexwn3_again_fieldheadercolumn}<TH style="WIDTH: 153px" class="runner-cc ">{BEGIN symetexwn3_again_fieldheader}<A {$symetexwn3_again_orderlinkattrs}>Συμμετέχων3 ξανά 
+                </A>{END symetexwn3_again_fieldheader}</TH>
+                {END symetexwn3_again_fieldheadercolumn}{BEGIN symetexwn3_epimorfosi_fieldheadercolumn}<TH style="WIDTH: 182px" class="runner-cc ">{BEGIN symetexwn3_epimorfosi_fieldheader}<A {$symetexwn3_epimorfosi_orderlinkattrs}>Επιμόρφωση Συμμετέχων3 
+                  </A>{END symetexwn3_epimorfosi_fieldheader}</TH>
+                {END symetexwn3_epimorfosi_fieldheadercolumn}{BEGIN mathites_synolo_fieldheadercolumn}<TH style="WIDTH: 136px" class="runner-cc ">{BEGIN mathites_synolo_fieldheader}<A {$mathites_synolo_orderlinkattrs}>Σύνολο Μαθητές Ομάδας 
+                  </A>{END mathites_synolo_fieldheader}</TH>
+                {END mathites_synolo_fieldheadercolumn}{BEGIN agoria_fieldheadercolumn}<TH style="WIDTH: 79px" class="runner-cc ">{BEGIN agoria_fieldheader}<A {$agoria_orderlinkattrs}>Αγόρια </A>{END agoria_fieldheader}</TH>
+                {END agoria_fieldheadercolumn}{BEGIN koritsia_fieldheadercolumn}<TH style="WIDTH: 85px" class="runner-cc ">{BEGIN koritsia_fieldheader}<A {$koritsia_orderlinkattrs}>Κορίτσια </A>{END koritsia_fieldheader}</TH>
+                {END koritsia_fieldheadercolumn}{BEGIN amiges_fieldheadercolumn}<TH style="WIDTH: 84px" class="runner-cc ">{BEGIN amiges_fieldheader}<A {$amiges_orderlinkattrs}>Σύνθεση Ομάδας </A>{END amiges_fieldheader}</TH>
+                {END amiges_fieldheadercolumn}{BEGIN meet_day_fieldheadercolumn}<TH style="WIDTH: 100px" class="runner-cc ">{BEGIN meet_day_fieldheader}<A {$meet_day_orderlinkattrs}>Ημέρα/ες Συνάντησης </A>{END meet_day_fieldheader}</TH>
+                {END meet_day_fieldheadercolumn}{BEGIN meet_hour_fieldheadercolumn}<TH style="WIDTH: 105px" class="runner-cc ">{BEGIN meet_hour_fieldheader}<A {$meet_hour_orderlinkattrs}>Ώρα/ες Συνάντησης </A>{END meet_hour_fieldheader}</TH>
+                {END meet_hour_fieldheadercolumn}{BEGIN meet_place_fieldheadercolumn}<TH style="WIDTH: 109px" class="runner-cc ">{BEGIN meet_place_fieldheader}<A {$meet_place_orderlinkattrs}>Τόπος Συνάντησης </A>{END meet_place_fieldheader}</TH>
+                {END meet_place_fieldheadercolumn}{BEGIN arxeio_fieldheadercolumn}<TH style="WIDTH: 79px" class="runner-cc ">{BEGIN arxeio_fieldheader}<A {$arxeio_orderlinkattrs}>Υπάρχει Αρχείο </A>{END arxeio_fieldheader}</TH>
+                {END arxeio_fieldheadercolumn}{BEGIN ypothemata_fieldheadercolumn}<TH style="WIDTH: 111px" class="runner-cc ">{BEGIN ypothemata_fieldheader}<A {$ypothemata_orderlinkattrs}>Υποθέματα </A>{END ypothemata_fieldheader}</TH>
+                {END ypothemata_fieldheadercolumn}{BEGIN stoxoi_fieldheadercolumn}<TH style="WIDTH: 77px" class="runner-cc ">{BEGIN stoxoi_fieldheader}<A {$stoxoi_orderlinkattrs}>Στόχοι </A>{END stoxoi_fieldheader}</TH>
+                {END stoxoi_fieldheadercolumn}{BEGIN methodologia_fieldheadercolumn}<TH style="WIDTH: 120px" class="runner-cc ">{BEGIN methodologia_fieldheader}<A {$methodologia_orderlinkattrs}>Μεθοδολογία </A>{END methodologia_fieldheader}</TH>
+                {END methodologia_fieldheadercolumn}{BEGIN syndeseis_fieldheadercolumn}<TH style="WIDTH: 99px" class="runner-cc ">{BEGIN syndeseis_fieldheader}<A {$syndeseis_orderlinkattrs}>Συνδέσεις </A>{END syndeseis_fieldheader}</TH>
+                {END syndeseis_fieldheadercolumn}{BEGIN month1_fieldheadercolumn}<TH style="WIDTH: 86px" class="runner-cc ">{BEGIN month1_fieldheader}<A {$month1_orderlinkattrs}>Μήνας 1 </A>{END month1_fieldheader}</TH>
+                {END month1_fieldheadercolumn}{BEGIN month2_fieldheadercolumn}<TH style="WIDTH: 86px" class="runner-cc ">{BEGIN month2_fieldheader}<A {$month2_orderlinkattrs}>Μήνας 2 </A>{END month2_fieldheader}</TH>
+                {END month2_fieldheadercolumn}{BEGIN month3_fieldheadercolumn}<TH style="WIDTH: 86px" class="runner-cc ">{BEGIN month3_fieldheader}<A {$month3_orderlinkattrs}>Μήνας 3 </A>{END month3_fieldheader}</TH>
+                {END month3_fieldheadercolumn}{BEGIN month4_fieldheadercolumn}<TH style="WIDTH: 86px" class="runner-cc ">{BEGIN month4_fieldheader}<A {$month4_orderlinkattrs}>Μήνας 4 </A>{END month4_fieldheader}</TH>
+                {END month4_fieldheadercolumn}{BEGIN month5_fieldheadercolumn}<TH style="WIDTH: 86px" class="runner-cc ">{BEGIN month5_fieldheader}<A {$month5_orderlinkattrs}>Μήνας 5 </A>{END month5_fieldheader}</TH>
+                {END month5_fieldheadercolumn}{BEGIN episkepseis_fieldheadercolumn}<TH style="WIDTH: 109px" class="runner-cc ">{BEGIN episkepseis_fieldheader}<A {$episkepseis_orderlinkattrs}>Αρ. Επισκέψεων </A>{END episkepseis_fieldheader}</TH>
+                {END episkepseis_fieldheadercolumn}{BEGIN submission_date_fieldheadercolumn}<TH style="WIDTH: 138px" class="runner-cc ">{BEGIN submission_date_fieldheader}<A {$submission_date_orderlinkattrs}>Ημερομηνία Υποβολής Αιτησης 
+                  </A>{END submission_date_fieldheader}</TH>
+                {END submission_date_fieldheadercolumn}{BEGIN is_finalized_fieldheadercolumn}<TH style="WIDTH: 106px" class="runner-cc ">{BEGIN is_finalized_fieldheader}<A {$is_finalized_orderlinkattrs}>Διακοπή Προγράμματος 
+                </A>{END is_finalized_fieldheader}</TH>
+                {END is_finalized_fieldheadercolumn}{BEGIN sch_id_fieldheadercolumn}<TH style="WIDTH: 79px" class="runner-cc runner-clast">{BEGIN sch_id_fieldheader}<A {$sch_id_orderlinkattrs}>sch_id </A>{END sch_id_fieldheader}</TH>
+                {END sch_id_fieldheadercolumn}<TH style="WIDTH: 5px" class=runner-cr><IMG src="images/spacer.gif"></TH>
+                {BEGIN endrecordheader_block}<TH style="WIDTH: 1px" class=runner-cs></TH>{END endrecordheader_block}{END record_header}</TR>{END grid_header}</THEAD>
+              {BEGIN grid_row}<TR class="runner-row style1 {$rowclass}" {$rowstyle} {$rowattrs}>{BEGIN grid_record}<TD style="WIDTH: 5px" class=runner-cl {$rowstyle}></TD>
+                {BEGIN listIcons_column}<TD style="WIDTH: 75px" class="runner-cc runner-bc runner-icons" iEditCont="all" {$rowstyle}>{BEGIN view_column}{BEGIN view_link}<A class=runner-button-img title=View {$viewlink_attrs}><IMG class=runner-cicon alt=View src="images/icon_view_new.gif"></A>{END view_link}{END view_column}</TD>
+                {END listIcons_column}{BEGIN checkbox_column}<TD style="WIDTH: 25px" class="runner-cc runner-bc" iEditCont="checkBox" {$rowstyle}>{BEGIN checkbox}<INPUT type=checkbox {$checkbox_attrs}>{END checkbox}</TD>
+                {END checkbox_column}{BEGIN submited_fieldcolumn}<td class="runner-cc  {$submited_class}" {$submited_style}>{$submited_value}
+	</td>
+{END submited_fieldcolumn}
+
+	{BEGIN sch_id1_fieldcolumn}<td class="runner-cc  {$sch_id1_class}" {$sch_id1_style}>{$sch_id1_value}
+	</td>
+{END sch_id1_fieldcolumn}
+
+	{BEGIN submission_id_fieldcolumn}<TD style="WIDTH: 127px" class="runner-cc  {$submission_id_class}" {$submission_id_style}>{$submission_id_value}</TD>
+                {END submission_id_fieldcolumn}{BEGIN programa_fieldcolumn}<TD style="WIDTH: 103px" class="runner-cc  {$programa_class}" {$programa_style}>{$programa_value}</TD>
+                {END programa_fieldcolumn}{BEGIN date_fieldcolumn}<TD style="WIDTH: 72px" class="runner-cc  {$date_class}" {$date_style}>{$date_value}</TD>
+                {END date_fieldcolumn}{BEGIN ar_protocol_fieldcolumn}<TD style="WIDTH: 112px" class="runner-cc  {$ar_protocol_class}" {$ar_protocol_style}>{$ar_protocol_value}</TD>
+                {END ar_protocol_fieldcolumn}{BEGIN sxol_etos_fieldcolumn}<TD style="WIDTH: 101px" class="runner-cc  {$sxol_etos_class}" {$sxol_etos_style}>{$sxol_etos_value}</TD>
+                {END sxol_etos_fieldcolumn}{BEGIN dide_name_fieldcolumn}<TD style="WIDTH: 110px" class="runner-cc  {$dide_name_class}" {$dide_name_style}>{$dide_name_value}</TD>
+                {END dide_name_fieldcolumn}{BEGIN sch_name_fieldcolumn}<TD style="WIDTH: 105px" class="runner-cc  {$sch_name_class}" {$sch_name_style}>{$sch_name_value}</TD>
+                {END sch_name_fieldcolumn}{BEGIN tel_ergasias_fieldcolumn}<TD style="WIDTH: 116px" class="runner-cc  {$tel_ergasias_class}" {$tel_ergasias_style}>{$tel_ergasias_value}</TD>
+                {END tel_ergasias_fieldcolumn}{BEGIN dimos_fieldcolumn}<TD style="WIDTH: 81px" class="runner-cc  {$dimos_class}" {$dimos_style}>{$dimos_value}</TD>
+                {END dimos_fieldcolumn}{BEGIN fax_fieldcolumn}<TD style="WIDTH: 65px" class="runner-cc  {$fax_class}" {$fax_style}>{$fax_value}</TD>
+                {END fax_fieldcolumn}{BEGIN e_mail_fieldcolumn}<TD style="WIDTH: 85px" class="runner-cc  {$e_mail_class}" {$e_mail_style}>{$e_mail_value}</TD>
+                {END e_mail_fieldcolumn}{BEGIN sch_teachers_fieldcolumn}<TD style="WIDTH: 122px" class="runner-cc  {$sch_teachers_class}" {$sch_teachers_style}>{$sch_teachers_value}</TD>
+                {END sch_teachers_fieldcolumn}{BEGIN sch_students_fieldcolumn}<TD style="WIDTH: 121px" class="runner-cc  {$sch_students_class}" {$sch_students_style}>{$sch_students_value}</TD>
+                {END sch_students_fieldcolumn}{BEGIN dieythintis_name_fieldcolumn}<TD style="WIDTH: 144px" class="runner-cc  {$dieythintis_name_class}" {$dieythintis_name_style}>{$dieythintis_name_value}</TD>
+                {END dieythintis_name_fieldcolumn}{BEGIN klados_dieythinti_fieldcolumn}<TD style="WIDTH: 143px" class="runner-cc  {$klados_dieythinti_class}" {$klados_dieythinti_style}>{$klados_dieythinti_value}</TD>
+                {END klados_dieythinti_fieldcolumn}{BEGIN program_title_fieldcolumn}<TD style="WIDTH: 124px" class="runner-cc  {$program_title_class}" {$program_title_style}>{$program_title_value}</TD>
+                {END program_title_fieldcolumn}{BEGIN ar_praksis_fieldcolumn}<TD style="WIDTH: 107px" class="runner-cc  {$ar_praksis_class}" {$ar_praksis_style}>{$ar_praksis_value}</TD>
+                {END ar_praksis_fieldcolumn}{BEGIN date_praksis_fieldcolumn}<TD style="WIDTH: 120px" class="runner-cc  {$date_praksis_class}" {$date_praksis_style}>{$date_praksis_value}</TD>
+                {END date_praksis_fieldcolumn}{BEGIN sch_orario_fieldcolumn}<TD style="WIDTH: 107px" class="runner-cc  {$sch_orario_class}" {$sch_orario_style}>{$sch_orario_value}</TD>
+                {END sch_orario_fieldcolumn}{BEGIN ypeythinos_name_fieldcolumn}<TD style="WIDTH: 148px" class="runner-cc  {$ypeythinos_name_class}" {$ypeythinos_name_style}>{$ypeythinos_name_value}</TD>
+                {END ypeythinos_name_fieldcolumn}{BEGIN ypeythinos_amm_fieldcolumn}<TD style="WIDTH: 145px" class="runner-cc  {$ypeythinos_amm_class}" {$ypeythinos_amm_style}>{$ypeythinos_amm_value}</TD>
+                {END ypeythinos_amm_fieldcolumn}{BEGIN ypeythinos_klados_fieldcolumn}<TD style="WIDTH: 153px" class="runner-cc  {$ypeythinos_klados_class}" {$ypeythinos_klados_style}>{$ypeythinos_klados_value}</TD>
+                {END ypeythinos_klados_fieldcolumn}{BEGIN ypeythinos_wres_fieldcolumn}<TD style="WIDTH: 143px" class="runner-cc  {$ypeythinos_wres_class}" {$ypeythinos_wres_style}>{$ypeythinos_wres_value}</TD>
+                {END ypeythinos_wres_fieldcolumn}{BEGIN ypeythinos_again_fieldcolumn}<TD style="WIDTH: 147px" class="runner-cc  {$ypeythinos_again_class}" {$ypeythinos_again_style}>{$ypeythinos_again_value}</TD>
+                {END ypeythinos_again_fieldcolumn}{BEGIN ypeythinos_epimorfosi_fieldcolumn}<TD style="WIDTH: 176px" class="runner-cc  {$ypeythinos_epimorfosi_class}" {$ypeythinos_epimorfosi_style}>{$ypeythinos_epimorfosi_value}</TD>
+                {END ypeythinos_epimorfosi_fieldcolumn}{BEGIN symetexwn1_name_fieldcolumn}<TD style="WIDTH: 158px" class="runner-cc  {$symetexwn1_name_class}" {$symetexwn1_name_style}>{$symetexwn1_name_value}</TD>
+                {END symetexwn1_name_fieldcolumn}{BEGIN symetexwn1_amm_fieldcolumn}<TD style="WIDTH: 155px" class="runner-cc  {$symetexwn1_amm_class}" {$symetexwn1_amm_style}>{$symetexwn1_amm_value}</TD>
+                {END symetexwn1_amm_fieldcolumn}{BEGIN symetexwn1_klados_fieldcolumn}<TD style="WIDTH: 163px" class="runner-cc  {$symetexwn1_klados_class}" {$symetexwn1_klados_style}>{$symetexwn1_klados_value}</TD>
+                {END symetexwn1_klados_fieldcolumn}{BEGIN symetexwn1_wres_fieldcolumn}<TD style="WIDTH: 153px" class="runner-cc  {$symetexwn1_wres_class}" {$symetexwn1_wres_style}>{$symetexwn1_wres_value}</TD>
+                {END symetexwn1_wres_fieldcolumn}{BEGIN symetexwn1_again_fieldcolumn}<TD style="WIDTH: 157px" class="runner-cc  {$symetexwn1_again_class}" {$symetexwn1_again_style}>{$symetexwn1_again_value}</TD>
+                {END symetexwn1_again_fieldcolumn}{BEGIN symetexwn1_epimorfosi_fieldcolumn}<TD style="WIDTH: 186px" class="runner-cc  {$symetexwn1_epimorfosi_class}" {$symetexwn1_epimorfosi_style}>{$symetexwn1_epimorfosi_value}</TD>
+                {END symetexwn1_epimorfosi_fieldcolumn}{BEGIN symetexwn2_name_fieldcolumn}<TD style="WIDTH: 158px" class="runner-cc  {$symetexwn2_name_class}" {$symetexwn2_name_style}>{$symetexwn2_name_value}</TD>
+                {END symetexwn2_name_fieldcolumn}{BEGIN symetexwn2_amm_fieldcolumn}<TD style="WIDTH: 155px" class="runner-cc  {$symetexwn2_amm_class}" {$symetexwn2_amm_style}>{$symetexwn2_amm_value}</TD>
+                {END symetexwn2_amm_fieldcolumn}{BEGIN symetexwn2_klados_fieldcolumn}<TD style="WIDTH: 163px" class="runner-cc  {$symetexwn2_klados_class}" {$symetexwn2_klados_style}>{$symetexwn2_klados_value}</TD>
+                {END symetexwn2_klados_fieldcolumn}{BEGIN symetexwn2_wres_fieldcolumn}<TD style="WIDTH: 153px" class="runner-cc  {$symetexwn2_wres_class}" {$symetexwn2_wres_style}>{$symetexwn2_wres_value}</TD>
+                {END symetexwn2_wres_fieldcolumn}{BEGIN symetexwn2_again_fieldcolumn}<TD style="WIDTH: 157px" class="runner-cc  {$symetexwn2_again_class}" {$symetexwn2_again_style}>{$symetexwn2_again_value}</TD>
+                {END symetexwn2_again_fieldcolumn}{BEGIN symetexwn2_epimorfosi_fieldcolumn}<TD style="WIDTH: 186px" class="runner-cc  {$symetexwn2_epimorfosi_class}" {$symetexwn2_epimorfosi_style}>{$symetexwn2_epimorfosi_value}</TD>
+                {END symetexwn2_epimorfosi_fieldcolumn}{BEGIN symetexwn3_name_fieldcolumn}<TD style="WIDTH: 158px" class="runner-cc  {$symetexwn3_name_class}" {$symetexwn3_name_style}>{$symetexwn3_name_value}</TD>
+                {END symetexwn3_name_fieldcolumn}{BEGIN symetexwn3_amm_fieldcolumn}<TD style="WIDTH: 155px" class="runner-cc  {$symetexwn3_amm_class}" {$symetexwn3_amm_style}>{$symetexwn3_amm_value}</TD>
+                {END symetexwn3_amm_fieldcolumn}{BEGIN symetexwn3_klados_fieldcolumn}<TD style="WIDTH: 163px" class="runner-cc  {$symetexwn3_klados_class}" {$symetexwn3_klados_style}>{$symetexwn3_klados_value}</TD>
+                {END symetexwn3_klados_fieldcolumn}{BEGIN symetexwn3_wres_fieldcolumn}<TD style="WIDTH: 153px" class="runner-cc  {$symetexwn3_wres_class}" {$symetexwn3_wres_style}>{$symetexwn3_wres_value}</TD>
+                {END symetexwn3_wres_fieldcolumn}{BEGIN symetexwn3_again_fieldcolumn}<TD style="WIDTH: 157px" class="runner-cc  {$symetexwn3_again_class}" {$symetexwn3_again_style}>{$symetexwn3_again_value}</TD>
+                {END symetexwn3_again_fieldcolumn}{BEGIN symetexwn3_epimorfosi_fieldcolumn}<TD style="WIDTH: 186px" class="runner-cc  {$symetexwn3_epimorfosi_class}" {$symetexwn3_epimorfosi_style}>{$symetexwn3_epimorfosi_value}</TD>
+                {END symetexwn3_epimorfosi_fieldcolumn}{BEGIN mathites_synolo_fieldcolumn}<TD style="WIDTH: 140px" class="runner-cc  {$mathites_synolo_class}" {$mathites_synolo_style}>{$mathites_synolo_value}</TD>
+                {END mathites_synolo_fieldcolumn}{BEGIN agoria_fieldcolumn}<TD style="WIDTH: 83px" class="runner-cc  {$agoria_class}" {$agoria_style}>{$agoria_value}</TD>
+                {END agoria_fieldcolumn}{BEGIN koritsia_fieldcolumn}<TD style="WIDTH: 89px" class="runner-cc  {$koritsia_class}" {$koritsia_style}>{$koritsia_value}</TD>
+                {END koritsia_fieldcolumn}{BEGIN amiges_fieldcolumn}<TD style="WIDTH: 88px" class="runner-cc  {$amiges_class}" {$amiges_style}>{$amiges_value}</TD>
+                {END amiges_fieldcolumn}{BEGIN meet_day_fieldcolumn}<TD style="WIDTH: 104px" class="runner-cc  {$meet_day_class}" {$meet_day_style}>{$meet_day_value}</TD>
+                {END meet_day_fieldcolumn}{BEGIN meet_hour_fieldcolumn}<TD style="WIDTH: 109px" class="runner-cc  {$meet_hour_class}" {$meet_hour_style}>{$meet_hour_value}</TD>
+                {END meet_hour_fieldcolumn}{BEGIN meet_place_fieldcolumn}<TD style="WIDTH: 113px" class="runner-cc  {$meet_place_class}" {$meet_place_style}>{$meet_place_value}</TD>
+                {END meet_place_fieldcolumn}{BEGIN arxeio_fieldcolumn}<TD style="WIDTH: 83px" class="runner-cc  {$arxeio_class}" {$arxeio_style}>{$arxeio_value}</TD>
+                {END arxeio_fieldcolumn}{BEGIN ypothemata_fieldcolumn}<TD style="WIDTH: 115px" class="runner-cc  {$ypothemata_class}" {$ypothemata_style}>{$ypothemata_value}</TD>
+                {END ypothemata_fieldcolumn}{BEGIN stoxoi_fieldcolumn}<TD style="WIDTH: 81px" class="runner-cc  {$stoxoi_class}" {$stoxoi_style}>{$stoxoi_value}</TD>
+                {END stoxoi_fieldcolumn}{BEGIN methodologia_fieldcolumn}<TD style="WIDTH: 124px" class="runner-cc  {$methodologia_class}" {$methodologia_style}>{$methodologia_value}</TD>
+                {END methodologia_fieldcolumn}{BEGIN syndeseis_fieldcolumn}<TD style="WIDTH: 103px" class="runner-cc  {$syndeseis_class}" {$syndeseis_style}>{$syndeseis_value}</TD>
+                {END syndeseis_fieldcolumn}{BEGIN month1_fieldcolumn}<TD style="WIDTH: 90px" class="runner-cc  {$month1_class}" {$month1_style}>{$month1_value}</TD>
+                {END month1_fieldcolumn}{BEGIN month2_fieldcolumn}<TD style="WIDTH: 90px" class="runner-cc  {$month2_class}" {$month2_style}>{$month2_value}</TD>
+                {END month2_fieldcolumn}{BEGIN month3_fieldcolumn}<TD style="WIDTH: 90px" class="runner-cc  {$month3_class}" {$month3_style}>{$month3_value}</TD>
+                {END month3_fieldcolumn}{BEGIN month4_fieldcolumn}<TD style="WIDTH: 90px" class="runner-cc  {$month4_class}" {$month4_style}>{$month4_value}</TD>
+                {END month4_fieldcolumn}{BEGIN month5_fieldcolumn}<TD style="WIDTH: 90px" class="runner-cc  {$month5_class}" {$month5_style}>{$month5_value}</TD>
+                {END month5_fieldcolumn}{BEGIN episkepseis_fieldcolumn}<TD style="WIDTH: 113px" class="runner-cc  {$episkepseis_class}" {$episkepseis_style}>{$episkepseis_value}</TD>
+                {END episkepseis_fieldcolumn}{BEGIN submission_date_fieldcolumn}<TD style="WIDTH: 142px" class="runner-cc  {$submission_date_class}" {$submission_date_style}>{$submission_date_value}</TD>
+                {END submission_date_fieldcolumn}{BEGIN is_finalized_fieldcolumn}<TD style="WIDTH: 110px" class="runner-cc  {$is_finalized_class}" {$is_finalized_style}>{$is_finalized_value}</TD>
+                {END is_finalized_fieldcolumn}{BEGIN sch_id_fieldcolumn}<TD style="WIDTH: 83px" class="runner-cc runner-clast {$sch_id_class}" {$sch_id_style}>{$sch_id_value}</TD>
+                {END sch_id_fieldcolumn}<TD style="WIDTH: 5px" class=runner-cr {$rowstyle}></TD>
+                {BEGIN endrecord_block}<TD style="WIDTH: 1px" class=runner-cs {$endrecordblock_attrs}></TD>{END endrecord_block}{END grid_record}</TR>
+              {END grid_row}{BEGIN grid_footer}<TR class="runner-bottomrow style1{$gridFooter_class}">{BEGIN record_footer}<TD style="WIDTH: 5px" class=runner-cl><IMG src="images/spacer.gif"></TD>
+                {BEGIN listIcons_column}<TD style="WIDTH: 83px" class=runner-cc></TD>
+                {END listIcons_column}{BEGIN checkbox_column}<TD style="WIDTH: 33px" class=runner-cc></TD>
+                {END checkbox_column}{BEGIN submited_fieldheadercolumn}<td class="runner-cc "></td>
+{END submited_fieldheadercolumn}
+{BEGIN sch_id1_fieldheadercolumn}<td class="runner-cc "></td>
+{END sch_id1_fieldheadercolumn}
+{BEGIN submission_id_fieldheadercolumn}<TD style="WIDTH: 135px" class="runner-cc "></TD>
+                {END submission_id_fieldheadercolumn}{BEGIN programa_fieldheadercolumn}<TD style="WIDTH: 111px" class="runner-cc "></TD>
+                {END programa_fieldheadercolumn}{BEGIN date_fieldheadercolumn}<TD style="WIDTH: 80px" class="runner-cc "></TD>
+                {END date_fieldheadercolumn}{BEGIN ar_protocol_fieldheadercolumn}<TD style="WIDTH: 120px" class="runner-cc "></TD>
+                {END ar_protocol_fieldheadercolumn}{BEGIN sxol_etos_fieldheadercolumn}<TD style="WIDTH: 109px" class="runner-cc "></TD>
+                {END sxol_etos_fieldheadercolumn}{BEGIN dide_name_fieldheadercolumn}<TD style="WIDTH: 118px" class="runner-cc "></TD>
+                {END dide_name_fieldheadercolumn}{BEGIN sch_name_fieldheadercolumn}<TD style="WIDTH: 113px" class="runner-cc "></TD>
+                {END sch_name_fieldheadercolumn}{BEGIN tel_ergasias_fieldheadercolumn}<TD style="WIDTH: 124px" class="runner-cc "></TD>
+                {END tel_ergasias_fieldheadercolumn}{BEGIN dimos_fieldheadercolumn}<TD style="WIDTH: 89px" class="runner-cc "></TD>
+                {END dimos_fieldheadercolumn}{BEGIN fax_fieldheadercolumn}<TD style="WIDTH: 73px" class="runner-cc "></TD>
+                {END fax_fieldheadercolumn}{BEGIN e_mail_fieldheadercolumn}<TD style="WIDTH: 93px" class="runner-cc "></TD>
+                {END e_mail_fieldheadercolumn}{BEGIN sch_teachers_fieldheadercolumn}<TD style="WIDTH: 130px" class="runner-cc "></TD>
+                {END sch_teachers_fieldheadercolumn}{BEGIN sch_students_fieldheadercolumn}<TD style="WIDTH: 129px" class="runner-cc "></TD>
+                {END sch_students_fieldheadercolumn}{BEGIN dieythintis_name_fieldheadercolumn}<TD style="WIDTH: 152px" class="runner-cc "></TD>
+                {END dieythintis_name_fieldheadercolumn}{BEGIN klados_dieythinti_fieldheadercolumn}<TD style="WIDTH: 151px" class="runner-cc "></TD>
+                {END klados_dieythinti_fieldheadercolumn}{BEGIN program_title_fieldheadercolumn}<TD style="WIDTH: 132px" class="runner-cc "></TD>
+                {END program_title_fieldheadercolumn}{BEGIN ar_praksis_fieldheadercolumn}<TD style="WIDTH: 115px" class="runner-cc "></TD>
+                {END ar_praksis_fieldheadercolumn}{BEGIN date_praksis_fieldheadercolumn}<TD style="WIDTH: 128px" class="runner-cc "></TD>
+                {END date_praksis_fieldheadercolumn}{BEGIN sch_orario_fieldheadercolumn}<TD style="WIDTH: 115px" class="runner-cc "></TD>
+                {END sch_orario_fieldheadercolumn}{BEGIN ypeythinos_name_fieldheadercolumn}<TD style="WIDTH: 156px" class="runner-cc "></TD>
+                {END ypeythinos_name_fieldheadercolumn}{BEGIN ypeythinos_amm_fieldheadercolumn}<TD style="WIDTH: 153px" class="runner-cc "></TD>
+                {END ypeythinos_amm_fieldheadercolumn}{BEGIN ypeythinos_klados_fieldheadercolumn}<TD style="WIDTH: 161px" class="runner-cc "></TD>
+                {END ypeythinos_klados_fieldheadercolumn}{BEGIN ypeythinos_wres_fieldheadercolumn}<TD style="WIDTH: 151px" class="runner-cc "></TD>
+                {END ypeythinos_wres_fieldheadercolumn}{BEGIN ypeythinos_again_fieldheadercolumn}<TD style="WIDTH: 155px" class="runner-cc "></TD>
+                {END ypeythinos_again_fieldheadercolumn}{BEGIN ypeythinos_epimorfosi_fieldheadercolumn}<TD style="WIDTH: 184px" class="runner-cc "></TD>
+                {END ypeythinos_epimorfosi_fieldheadercolumn}{BEGIN symetexwn1_name_fieldheadercolumn}<TD style="WIDTH: 166px" class="runner-cc "></TD>
+                {END symetexwn1_name_fieldheadercolumn}{BEGIN symetexwn1_amm_fieldheadercolumn}<TD style="WIDTH: 163px" class="runner-cc "></TD>
+                {END symetexwn1_amm_fieldheadercolumn}{BEGIN symetexwn1_klados_fieldheadercolumn}<TD style="WIDTH: 171px" class="runner-cc "></TD>
+                {END symetexwn1_klados_fieldheadercolumn}{BEGIN symetexwn1_wres_fieldheadercolumn}<TD style="WIDTH: 161px" class="runner-cc "></TD>
+                {END symetexwn1_wres_fieldheadercolumn}{BEGIN symetexwn1_again_fieldheadercolumn}<TD style="WIDTH: 165px" class="runner-cc "></TD>
+                {END symetexwn1_again_fieldheadercolumn}{BEGIN symetexwn1_epimorfosi_fieldheadercolumn}<TD style="WIDTH: 194px" class="runner-cc "></TD>
+                {END symetexwn1_epimorfosi_fieldheadercolumn}{BEGIN symetexwn2_name_fieldheadercolumn}<TD style="WIDTH: 166px" class="runner-cc "></TD>
+                {END symetexwn2_name_fieldheadercolumn}{BEGIN symetexwn2_amm_fieldheadercolumn}<TD style="WIDTH: 163px" class="runner-cc "></TD>
+                {END symetexwn2_amm_fieldheadercolumn}{BEGIN symetexwn2_klados_fieldheadercolumn}<TD style="WIDTH: 171px" class="runner-cc "></TD>
+                {END symetexwn2_klados_fieldheadercolumn}{BEGIN symetexwn2_wres_fieldheadercolumn}<TD style="WIDTH: 161px" class="runner-cc "></TD>
+                {END symetexwn2_wres_fieldheadercolumn}{BEGIN symetexwn2_again_fieldheadercolumn}<TD style="WIDTH: 165px" class="runner-cc "></TD>
+                {END symetexwn2_again_fieldheadercolumn}{BEGIN symetexwn2_epimorfosi_fieldheadercolumn}<TD style="WIDTH: 194px" class="runner-cc "></TD>
+                {END symetexwn2_epimorfosi_fieldheadercolumn}{BEGIN symetexwn3_name_fieldheadercolumn}<TD style="WIDTH: 166px" class="runner-cc "></TD>
+                {END symetexwn3_name_fieldheadercolumn}{BEGIN symetexwn3_amm_fieldheadercolumn}<TD style="WIDTH: 163px" class="runner-cc "></TD>
+                {END symetexwn3_amm_fieldheadercolumn}{BEGIN symetexwn3_klados_fieldheadercolumn}<TD style="WIDTH: 171px" class="runner-cc "></TD>
+                {END symetexwn3_klados_fieldheadercolumn}{BEGIN symetexwn3_wres_fieldheadercolumn}<TD style="WIDTH: 161px" class="runner-cc "></TD>
+                {END symetexwn3_wres_fieldheadercolumn}{BEGIN symetexwn3_again_fieldheadercolumn}<TD style="WIDTH: 165px" class="runner-cc "></TD>
+                {END symetexwn3_again_fieldheadercolumn}{BEGIN symetexwn3_epimorfosi_fieldheadercolumn}<TD style="WIDTH: 194px" class="runner-cc "></TD>
+                {END symetexwn3_epimorfosi_fieldheadercolumn}{BEGIN mathites_synolo_fieldheadercolumn}<TD style="WIDTH: 148px" class="runner-cc "></TD>
+                {END mathites_synolo_fieldheadercolumn}{BEGIN agoria_fieldheadercolumn}<TD style="WIDTH: 91px" class="runner-cc "></TD>
+                {END agoria_fieldheadercolumn}{BEGIN koritsia_fieldheadercolumn}<TD style="WIDTH: 97px" class="runner-cc "></TD>
+                {END koritsia_fieldheadercolumn}{BEGIN amiges_fieldheadercolumn}<TD style="WIDTH: 96px" class="runner-cc "></TD>
+                {END amiges_fieldheadercolumn}{BEGIN meet_day_fieldheadercolumn}<TD style="WIDTH: 112px" class="runner-cc "></TD>
+                {END meet_day_fieldheadercolumn}{BEGIN meet_hour_fieldheadercolumn}<TD style="WIDTH: 117px" class="runner-cc "></TD>
+                {END meet_hour_fieldheadercolumn}{BEGIN meet_place_fieldheadercolumn}<TD style="WIDTH: 121px" class="runner-cc "></TD>
+                {END meet_place_fieldheadercolumn}{BEGIN arxeio_fieldheadercolumn}<TD style="WIDTH: 91px" class="runner-cc "></TD>
+                {END arxeio_fieldheadercolumn}{BEGIN ypothemata_fieldheadercolumn}<TD style="WIDTH: 123px" class="runner-cc "></TD>
+                {END ypothemata_fieldheadercolumn}{BEGIN stoxoi_fieldheadercolumn}<TD style="WIDTH: 89px" class="runner-cc "></TD>
+                {END stoxoi_fieldheadercolumn}{BEGIN methodologia_fieldheadercolumn}<TD style="WIDTH: 132px" class="runner-cc "></TD>
+                {END methodologia_fieldheadercolumn}{BEGIN syndeseis_fieldheadercolumn}<TD style="WIDTH: 111px" class="runner-cc "></TD>
+                {END syndeseis_fieldheadercolumn}{BEGIN month1_fieldheadercolumn}<TD style="WIDTH: 98px" class="runner-cc "></TD>
+                {END month1_fieldheadercolumn}{BEGIN month2_fieldheadercolumn}<TD style="WIDTH: 98px" class="runner-cc "></TD>
+                {END month2_fieldheadercolumn}{BEGIN month3_fieldheadercolumn}<TD style="WIDTH: 98px" class="runner-cc "></TD>
+                {END month3_fieldheadercolumn}{BEGIN month4_fieldheadercolumn}<TD style="WIDTH: 98px" class="runner-cc "></TD>
+                {END month4_fieldheadercolumn}{BEGIN month5_fieldheadercolumn}<TD style="WIDTH: 98px" class="runner-cc "></TD>
+                {END month5_fieldheadercolumn}{BEGIN episkepseis_fieldheadercolumn}<TD style="WIDTH: 121px" class="runner-cc "></TD>
+                {END episkepseis_fieldheadercolumn}{BEGIN submission_date_fieldheadercolumn}<TD style="WIDTH: 150px" class="runner-cc "></TD>
+                {END submission_date_fieldheadercolumn}{BEGIN is_finalized_fieldheadercolumn}<TD style="WIDTH: 118px" class="runner-cc "></TD>
+                {END is_finalized_fieldheadercolumn}{BEGIN sch_id_fieldheadercolumn}<TD style="WIDTH: 91px" class="runner-cc runner-clast"></TD>
+                {END sch_id_fieldheadercolumn}<TD style="WIDTH: 5px" class=runner-cr><IMG src="images/spacer.gif"></TD>
+                {BEGIN endrecordfooter_block}<TD style="WIDTH: 1px" class=runner-cs></TD>{END endrecordfooter_block}{END record_footer}</TR>{END grid_footer}</TABLE>{END grid_block}{END container_grid}</TD>
+          <TD class=runner-cr></TD></TR>
+        <TR 
+        class="runner-row style2 runner-b-wrapper {$wrapperclass_pagination}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents runner-wrapper">{BEGIN container_pagination}<TABLE class="runner-c runner-c-pagination" cellPadding=0><TR class="{$cheaderclass_pagination}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+              <TR class="runner-row style1"><TD class=runner-cl></TD>
+                <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR>{BEGIN pagination_block}<TD class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><SPAN>{$pagination}</SPAN></TD>{END pagination_block}</TR></TABLE></TD>
+                <TD class=runner-cr></TD></TR>
+              <TR class="{$cfooterclass_pagination}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_pagination}</TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_bigblock}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_bigblock}</TD>
+    <TD class="runner-right {$blockclass_right}"></TD></TR>
+  <TR class=runner-footer><TD class=runner-bottom 
+colSpan=3><!--%%bottom%%--></TD></TR></TABLE>{$footer}{END body} </BODY></HTML>

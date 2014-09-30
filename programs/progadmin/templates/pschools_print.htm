@@ -1,0 +1,323 @@
+<!doctype html><html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_pdf}
+<table class="runner-c runner-c-pdf" cellpadding="0" >
+<tr class="{$cheaderclass_pdf}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+
+<td  class="runner-cc runner-bl runner-b-printpdf" {$brickclass_printpdf}><span>{BEGIN pdflink_block}
+<a href="#" class=pdflink {$pdflink_attrs}>PDF View</a>
+{END pdflink_block}
+</span></td>
+
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_pdf}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_pdf}
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Στοιχεία Σχολείων</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN sch_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN sch_id_fieldheader}
+	<b>Sch Id</b>
+	{END sch_id_fieldheader}
+</th>
+{END sch_id_fieldheadercolumn}
+	{BEGIN submited_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN submited_fieldheader}
+	<b>Submited</b>
+	{END submited_fieldheader}
+</th>
+{END submited_fieldheadercolumn}
+	{BEGIN username_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN username_fieldheader}
+	<b>Username</b>
+	{END username_fieldheader}
+</th>
+{END username_fieldheadercolumn}
+	{BEGIN password_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN password_fieldheader}
+	<b>Password</b>
+	{END password_fieldheader}
+</th>
+{END password_fieldheadercolumn}
+	{BEGIN sch_code_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN sch_code_fieldheader}
+	<b>Sch Code</b>
+	{END sch_code_fieldheader}
+</th>
+{END sch_code_fieldheadercolumn}
+	{BEGIN sch_perioxi_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN sch_perioxi_fieldheader}
+	<b>Sch Perioxi</b>
+	{END sch_perioxi_fieldheader}
+</th>
+{END sch_perioxi_fieldheadercolumn}
+	{BEGIN sch_name_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN sch_name_fieldheader}
+	<b>Sch Name</b>
+	{END sch_name_fieldheader}
+</th>
+{END sch_name_fieldheadercolumn}
+	{BEGIN sch_dimos_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN sch_dimos_fieldheader}
+	<b>Sch Dimos</b>
+	{END sch_dimos_fieldheader}
+</th>
+{END sch_dimos_fieldheadercolumn}
+	{BEGIN sch_phone_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN sch_phone_fieldheader}
+	<b>Sch Phone</b>
+	{END sch_phone_fieldheader}
+</th>
+{END sch_phone_fieldheadercolumn}
+	{BEGIN fax_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN fax_fieldheader}
+	<b>Fax</b>
+	{END fax_fieldheader}
+</th>
+{END fax_fieldheadercolumn}
+	{BEGIN email_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN email_fieldheader}
+	<b>Email</b>
+	{END email_fieldheader}
+</th>
+{END email_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN sch_id_fieldcolumn}
+<td  class="runner-cc {$sch_id_class}" {$sch_id_style}>
+	{$sch_id_value}
+</td>
+{END sch_id_fieldcolumn}
+	{BEGIN submited_fieldcolumn}
+<td  class="runner-cc {$submited_class}" {$submited_style}>
+	{$submited_value}
+</td>
+{END submited_fieldcolumn}
+	{BEGIN username_fieldcolumn}
+<td  class="runner-cc {$username_class}" {$username_style}>
+	{$username_value}
+</td>
+{END username_fieldcolumn}
+	{BEGIN password_fieldcolumn}
+<td  class="runner-cc {$password_class}" {$password_style}>
+	{$password_value}
+</td>
+{END password_fieldcolumn}
+	{BEGIN sch_code_fieldcolumn}
+<td  class="runner-cc {$sch_code_class}" {$sch_code_style}>
+	{$sch_code_value}
+</td>
+{END sch_code_fieldcolumn}
+	{BEGIN sch_perioxi_fieldcolumn}
+<td  class="runner-cc {$sch_perioxi_class}" {$sch_perioxi_style}>
+	{$sch_perioxi_value}
+</td>
+{END sch_perioxi_fieldcolumn}
+	{BEGIN sch_name_fieldcolumn}
+<td  class="runner-cc {$sch_name_class}" {$sch_name_style}>
+	{$sch_name_value}
+</td>
+{END sch_name_fieldcolumn}
+	{BEGIN sch_dimos_fieldcolumn}
+<td  class="runner-cc {$sch_dimos_class}" {$sch_dimos_style}>
+	{$sch_dimos_value}
+</td>
+{END sch_dimos_fieldcolumn}
+	{BEGIN sch_phone_fieldcolumn}
+<td  class="runner-cc {$sch_phone_class}" {$sch_phone_style}>
+	{$sch_phone_value}
+</td>
+{END sch_phone_fieldcolumn}
+	{BEGIN fax_fieldcolumn}
+<td  class="runner-cc {$fax_class}" {$fax_style}>
+	{$fax_value}
+</td>
+{END fax_fieldcolumn}
+	{BEGIN email_fieldcolumn}
+<td  class="runner-cc {$email_class}" {$email_style}>
+	{$email_value}
+</td>
+{END email_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN sch_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END sch_id_fieldfootercolumn}
+{BEGIN submited_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END submited_fieldfootercolumn}
+{BEGIN username_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END username_fieldfootercolumn}
+{BEGIN password_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END password_fieldfootercolumn}
+{BEGIN sch_code_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END sch_code_fieldfootercolumn}
+{BEGIN sch_perioxi_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END sch_perioxi_fieldfootercolumn}
+{BEGIN sch_name_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END sch_name_fieldfootercolumn}
+{BEGIN sch_dimos_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END sch_dimos_fieldfootercolumn}
+{BEGIN sch_phone_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END sch_phone_fieldfootercolumn}
+{BEGIN fax_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END fax_fieldfootercolumn}
+{BEGIN email_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END email_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

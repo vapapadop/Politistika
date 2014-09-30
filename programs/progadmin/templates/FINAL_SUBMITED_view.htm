@@ -1,0 +1,1080 @@
+<!doctype html><html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_pdf}
+<table class="runner-c runner-c-pdf" cellpadding="0" >
+<tr class="{$cheaderclass_pdf}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+
+<td  class="runner-cc runner-bl runner-b-viewpdf" {$brickclass_viewpdf}><span>{BEGIN pdflink_block}
+<a href="#" class="pdflink" {$pdflink_attrs}>PDF View</a>
+{END pdflink_block}
+
+</span></td>
+
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_pdf}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_pdf}
+
+
+
+{BEGIN container_view}
+<table class="runner-c runner-c-view" cellpadding="0" align=center>
+
+
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-viewheader {$brickclass_viewheader}">ΜΟΝΟ ΟΡΙΣΤΙΚΕΣ ΥΠΟΒΟΛΕΣ, View record [
+Αρ. Ηλ. Καταχώρησης: {$show_key1}
+]</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
+
+
+	{BEGIN submission_id_fieldblock}
+	<tr class="runner-toprow header style1 runner-b-viewfields"><td class="runner-cl"><img src="images/spacer.gif"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_submission_id {$fielddispclass_submission_id}">
+			<b>Αρ. Ηλ. Καταχώρησης</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_submission_id {$fielddispclass_submission_id}">
+			{$submission_id_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"><img src="images/spacer.gif"></td></tr>
+{END submission_id_fieldblock}
+	{BEGIN programa_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_programa {$fielddispclass_programa}">
+			<b>Τύπος Προγράματος</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_programa {$fielddispclass_programa}">
+			{$programa_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END programa_fieldblock}
+	{BEGIN date_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_date {$fielddispclass_date}">
+			<b>Ημνια Πρωτλου Σχολείου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_date {$fielddispclass_date}">
+			{$date_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END date_fieldblock}
+	{BEGIN ar_protocol_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ar_protocol {$fielddispclass_ar_protocol}">
+			<b>Αρ. Πρωτλου Σχολείου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_ar_protocol {$fielddispclass_ar_protocol}">
+			{$ar_protocol_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END ar_protocol_fieldblock}
+	{BEGIN sxol_etos_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_sxol_etos {$fielddispclass_sxol_etos}">
+			<b>Σχολ. Ετος</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_sxol_etos {$fielddispclass_sxol_etos}">
+			{$sxol_etos_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END sxol_etos_fieldblock}
+	{BEGIN dide_name_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_dide_name {$fielddispclass_dide_name}">
+			<b>ΔΔΕ Ονομα</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_dide_name {$fielddispclass_dide_name}">
+			{$dide_name_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END dide_name_fieldblock}
+	{BEGIN sch_name_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_sch_name {$fielddispclass_sch_name}">
+			<b>Σχολείο</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_sch_name {$fielddispclass_sch_name}">
+			{$sch_name_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END sch_name_fieldblock}
+	{BEGIN tel_ergasias_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_tel_ergasias {$fielddispclass_tel_ergasias}">
+			<b>Τηλ. Σχολείου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_tel_ergasias {$fielddispclass_tel_ergasias}">
+			{$tel_ergasias_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END tel_ergasias_fieldblock}
+	{BEGIN dimos_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_dimos {$fielddispclass_dimos}">
+			<b>Δήμος Σχολείου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_dimos {$fielddispclass_dimos}">
+			{$dimos_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END dimos_fieldblock}
+	{BEGIN fax_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_fax {$fielddispclass_fax}">
+			<b>Fax</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_fax {$fielddispclass_fax}">
+			{$fax_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END fax_fieldblock}
+	{BEGIN e_mail_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_e_mail {$fielddispclass_e_mail}">
+			<b>E Mail</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_e_mail {$fielddispclass_e_mail}">
+			{$e_mail_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END e_mail_fieldblock}
+	{BEGIN sch_teachers_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_sch_teachers {$fielddispclass_sch_teachers}">
+			<b>Αρ. Καθηγητών Σχολείου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_sch_teachers {$fielddispclass_sch_teachers}">
+			{$sch_teachers_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END sch_teachers_fieldblock}
+	{BEGIN sch_students_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_sch_students {$fielddispclass_sch_students}">
+			<b>Αρ. Μαθητών Σχολείου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_sch_students {$fielddispclass_sch_students}">
+			{$sch_students_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END sch_students_fieldblock}
+	{BEGIN dieythintis_name_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_dieythintis_name {$fielddispclass_dieythintis_name}">
+			<b>Ονομα Διευθυντή</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_dieythintis_name {$fielddispclass_dieythintis_name}">
+			{$dieythintis_name_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END dieythintis_name_fieldblock}
+	{BEGIN klados_dieythinti_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_klados_dieythinti {$fielddispclass_klados_dieythinti}">
+			<b>Κλάδος Διευθυντή</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_klados_dieythinti {$fielddispclass_klados_dieythinti}">
+			{$klados_dieythinti_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END klados_dieythinti_fieldblock}
+	{BEGIN program_title_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_program_title {$fielddispclass_program_title}">
+			<b>Τίτλος Προγράμματος</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_program_title {$fielddispclass_program_title}">
+			{$program_title_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END program_title_fieldblock}
+	{BEGIN ar_praksis_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ar_praksis {$fielddispclass_ar_praksis}">
+			<b>Αρ. Πράξης Συλλόγου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_ar_praksis {$fielddispclass_ar_praksis}">
+			{$ar_praksis_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END ar_praksis_fieldblock}
+	{BEGIN date_praksis_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_date_praksis {$fielddispclass_date_praksis}">
+			<b>Ημνια Πράξης Συλλόγου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_date_praksis {$fielddispclass_date_praksis}">
+			{$date_praksis_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END date_praksis_fieldblock}
+	{BEGIN sch_orario_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_sch_orario {$fielddispclass_sch_orario}">
+			<b>Ωράριο Σχολείου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_sch_orario {$fielddispclass_sch_orario}">
+			{$sch_orario_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END sch_orario_fieldblock}
+	{BEGIN ypeythinos_name_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ypeythinos_name {$fielddispclass_ypeythinos_name}">
+			<b>Όνομα Υπευθύνου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_ypeythinos_name {$fielddispclass_ypeythinos_name}">
+			{$ypeythinos_name_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypeythinos_name_fieldblock}
+	{BEGIN ypeythinos_amm_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ypeythinos_amm {$fielddispclass_ypeythinos_amm}">
+			<b>ΑΦΜ Υπευθύνου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_ypeythinos_amm {$fielddispclass_ypeythinos_amm}">
+			{$ypeythinos_amm_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypeythinos_amm_fieldblock}
+	{BEGIN ypeythinos_klados_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ypeythinos_klados {$fielddispclass_ypeythinos_klados}">
+			<b>Κλάδος Υπευθύνου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_ypeythinos_klados {$fielddispclass_ypeythinos_klados}">
+			{$ypeythinos_klados_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypeythinos_klados_fieldblock}
+	{BEGIN ypeythinos_wres_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ypeythinos_wres {$fielddispclass_ypeythinos_wres}">
+			<b>Ώρες Υπευθύνου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_ypeythinos_wres {$fielddispclass_ypeythinos_wres}">
+			{$ypeythinos_wres_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypeythinos_wres_fieldblock}
+	{BEGIN ypeythinos_again_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ypeythinos_again {$fielddispclass_ypeythinos_again}">
+			<b>Υπεύθυνος ξανά</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_ypeythinos_again {$fielddispclass_ypeythinos_again}">
+			{$ypeythinos_again_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypeythinos_again_fieldblock}
+	{BEGIN ypeythinos_epimorfosi_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ypeythinos_epimorfosi {$fielddispclass_ypeythinos_epimorfosi}">
+			<b>Επιμόρφωση Υπευθύνου</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_ypeythinos_epimorfosi {$fielddispclass_ypeythinos_epimorfosi}">
+			{$ypeythinos_epimorfosi_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypeythinos_epimorfosi_fieldblock}
+	{BEGIN symetexwn1_name_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn1_name {$fielddispclass_symetexwn1_name}">
+			<b>Όνομα Συμμετέχων1</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn1_name {$fielddispclass_symetexwn1_name}">
+			{$symetexwn1_name_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn1_name_fieldblock}
+	{BEGIN symetexwn1_amm_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn1_amm {$fielddispclass_symetexwn1_amm}">
+			<b>ΑΦΜ Συμμετέχων1</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn1_amm {$fielddispclass_symetexwn1_amm}">
+			{$symetexwn1_amm_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn1_amm_fieldblock}
+	{BEGIN symetexwn1_klados_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn1_klados {$fielddispclass_symetexwn1_klados}">
+			<b>Κλάδος Συμμετέχων1</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn1_klados {$fielddispclass_symetexwn1_klados}">
+			{$symetexwn1_klados_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn1_klados_fieldblock}
+	{BEGIN symetexwn1_wres_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn1_wres {$fielddispclass_symetexwn1_wres}">
+			<b>Ώρες Συμμετέχων1</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn1_wres {$fielddispclass_symetexwn1_wres}">
+			{$symetexwn1_wres_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn1_wres_fieldblock}
+	{BEGIN symetexwn1_again_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn1_again {$fielddispclass_symetexwn1_again}">
+			<b>Συμμετέχων1 ξανά</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn1_again {$fielddispclass_symetexwn1_again}">
+			{$symetexwn1_again_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn1_again_fieldblock}
+	{BEGIN symetexwn1_epimorfosi_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn1_epimorfosi {$fielddispclass_symetexwn1_epimorfosi}">
+			<b>Επιμόρφωση Συμμετέχων1</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn1_epimorfosi {$fielddispclass_symetexwn1_epimorfosi}">
+			{$symetexwn1_epimorfosi_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn1_epimorfosi_fieldblock}
+	{BEGIN symetexwn2_name_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn2_name {$fielddispclass_symetexwn2_name}">
+			<b>Όνομα Συμμετέχων2</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn2_name {$fielddispclass_symetexwn2_name}">
+			{$symetexwn2_name_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn2_name_fieldblock}
+	{BEGIN symetexwn2_amm_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn2_amm {$fielddispclass_symetexwn2_amm}">
+			<b>ΑΦΜ Συμμετέχων2</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn2_amm {$fielddispclass_symetexwn2_amm}">
+			{$symetexwn2_amm_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn2_amm_fieldblock}
+	{BEGIN symetexwn2_klados_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn2_klados {$fielddispclass_symetexwn2_klados}">
+			<b>Κλάδος Συμμετέχων2</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn2_klados {$fielddispclass_symetexwn2_klados}">
+			{$symetexwn2_klados_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn2_klados_fieldblock}
+	{BEGIN symetexwn2_wres_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn2_wres {$fielddispclass_symetexwn2_wres}">
+			<b>Ώρες Συμμετέχων2</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn2_wres {$fielddispclass_symetexwn2_wres}">
+			{$symetexwn2_wres_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn2_wres_fieldblock}
+	{BEGIN symetexwn2_again_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn2_again {$fielddispclass_symetexwn2_again}">
+			<b>Συμμετέχων2 ξανά</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn2_again {$fielddispclass_symetexwn2_again}">
+			{$symetexwn2_again_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn2_again_fieldblock}
+	{BEGIN symetexwn2_epimorfosi_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn2_epimorfosi {$fielddispclass_symetexwn2_epimorfosi}">
+			<b>Επιμόρφωση Συμμετέχων2</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn2_epimorfosi {$fielddispclass_symetexwn2_epimorfosi}">
+			{$symetexwn2_epimorfosi_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn2_epimorfosi_fieldblock}
+	{BEGIN symetexwn3_name_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn3_name {$fielddispclass_symetexwn3_name}">
+			<b>Όνομα Συμμετέχων3</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn3_name {$fielddispclass_symetexwn3_name}">
+			{$symetexwn3_name_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn3_name_fieldblock}
+	{BEGIN symetexwn3_amm_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn3_amm {$fielddispclass_symetexwn3_amm}">
+			<b>ΑΦΜ Συμμετέχων3</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn3_amm {$fielddispclass_symetexwn3_amm}">
+			{$symetexwn3_amm_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn3_amm_fieldblock}
+	{BEGIN symetexwn3_klados_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn3_klados {$fielddispclass_symetexwn3_klados}">
+			<b>Κλάδος Συμμετέχων3</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn3_klados {$fielddispclass_symetexwn3_klados}">
+			{$symetexwn3_klados_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn3_klados_fieldblock}
+	{BEGIN symetexwn3_wres_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn3_wres {$fielddispclass_symetexwn3_wres}">
+			<b>Ώρες Συμμετέχων3</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn3_wres {$fielddispclass_symetexwn3_wres}">
+			{$symetexwn3_wres_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn3_wres_fieldblock}
+	{BEGIN symetexwn3_again_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn3_again {$fielddispclass_symetexwn3_again}">
+			<b>Συμμετέχων3 ξανά</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn3_again {$fielddispclass_symetexwn3_again}">
+			{$symetexwn3_again_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn3_again_fieldblock}
+	{BEGIN symetexwn3_epimorfosi_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_symetexwn3_epimorfosi {$fielddispclass_symetexwn3_epimorfosi}">
+			<b>Επιμόρφωση Συμμετέχων3</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_symetexwn3_epimorfosi {$fielddispclass_symetexwn3_epimorfosi}">
+			{$symetexwn3_epimorfosi_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END symetexwn3_epimorfosi_fieldblock}
+	{BEGIN mathites_synolo_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_mathites_synolo {$fielddispclass_mathites_synolo}">
+			<b>Σύνολο Μαθητές Ομάδας</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_mathites_synolo {$fielddispclass_mathites_synolo}">
+			{$mathites_synolo_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END mathites_synolo_fieldblock}
+	{BEGIN agoria_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_agoria {$fielddispclass_agoria}">
+			<b>Αγόρια</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_agoria {$fielddispclass_agoria}">
+			{$agoria_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END agoria_fieldblock}
+	{BEGIN koritsia_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_koritsia {$fielddispclass_koritsia}">
+			<b>Κορίτσια</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_koritsia {$fielddispclass_koritsia}">
+			{$koritsia_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END koritsia_fieldblock}
+	{BEGIN amiges_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_amiges {$fielddispclass_amiges}">
+			<b>Σύνθεση Ομάδας</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_amiges {$fielddispclass_amiges}">
+			{$amiges_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END amiges_fieldblock}
+	{BEGIN meet_day_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_meet_day {$fielddispclass_meet_day}">
+			<b>Ημέρα/ες Συνάντησης</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_meet_day {$fielddispclass_meet_day}">
+			{$meet_day_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END meet_day_fieldblock}
+	{BEGIN meet_hour_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_meet_hour {$fielddispclass_meet_hour}">
+			<b>Ώρα/ες Συνάντησης</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_meet_hour {$fielddispclass_meet_hour}">
+			{$meet_hour_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END meet_hour_fieldblock}
+	{BEGIN meet_place_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_meet_place {$fielddispclass_meet_place}">
+			<b>Τόπος Συνάντησης</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_meet_place {$fielddispclass_meet_place}">
+			{$meet_place_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END meet_place_fieldblock}
+	{BEGIN arxeio_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_arxeio {$fielddispclass_arxeio}">
+			<b>Υπάρχει Αρχείο </b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_arxeio {$fielddispclass_arxeio}">
+			{$arxeio_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END arxeio_fieldblock}
+	{BEGIN ypothemata_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ypothemata {$fielddispclass_ypothemata}">
+			<b>Υποθέματα</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_ypothemata {$fielddispclass_ypothemata}">
+			{$ypothemata_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END ypothemata_fieldblock}
+	{BEGIN stoxoi_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_stoxoi {$fielddispclass_stoxoi}">
+			<b>Στόχοι</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_stoxoi {$fielddispclass_stoxoi}">
+			{$stoxoi_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END stoxoi_fieldblock}
+	{BEGIN methodologia_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_methodologia {$fielddispclass_methodologia}">
+			<b>Μεθοδολογία</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_methodologia {$fielddispclass_methodologia}">
+			{$methodologia_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END methodologia_fieldblock}
+	{BEGIN syndeseis_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_syndeseis {$fielddispclass_syndeseis}">
+			<b>Συνδέσεις</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_syndeseis {$fielddispclass_syndeseis}">
+			{$syndeseis_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END syndeseis_fieldblock}
+	{BEGIN month1_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_month1 {$fielddispclass_month1}">
+			<b>Μήνας 1</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_month1 {$fielddispclass_month1}">
+			{$month1_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END month1_fieldblock}
+	{BEGIN month2_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_month2 {$fielddispclass_month2}">
+			<b>Μήνας 2</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_month2 {$fielddispclass_month2}">
+			{$month2_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END month2_fieldblock}
+	{BEGIN month3_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_month3 {$fielddispclass_month3}">
+			<b>Μήνας 3</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_month3 {$fielddispclass_month3}">
+			{$month3_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END month3_fieldblock}
+	{BEGIN month4_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_month4 {$fielddispclass_month4}">
+			<b>Μήνας 4</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_month4 {$fielddispclass_month4}">
+			{$month4_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END month4_fieldblock}
+	{BEGIN month5_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_month5 {$fielddispclass_month5}">
+			<b>Μήνας 5</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_month5 {$fielddispclass_month5}">
+			{$month5_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END month5_fieldblock}
+	{BEGIN episkepseis_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_episkepseis {$fielddispclass_episkepseis}">
+			<b>Αρ. Επισκέψεων</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_episkepseis {$fielddispclass_episkepseis}">
+			{$episkepseis_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END episkepseis_fieldblock}
+	{BEGIN submission_date_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_submission_date {$fielddispclass_submission_date}">
+			<b>Ημερομηνία Υποβολής Αιτησης</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_submission_date {$fielddispclass_submission_date}">
+			{$submission_date_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END submission_date_fieldblock}
+	{BEGIN is_finalized_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_is_finalized {$fielddispclass_is_finalized}">
+			<b>Διακοπή Προγράμματος</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_is_finalized {$fielddispclass_is_finalized}">
+			{$is_finalized_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END is_finalized_fieldblock}
+	{BEGIN sch_id_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_sch_id {$fielddispclass_sch_id}">
+			<b>sch_id</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_sch_id {$fielddispclass_sch_id}">
+			{$sch_id_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END sch_id_fieldblock}
+	{BEGIN submited_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_submited {$fielddispclass_submited}">
+			<b>Submited</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_submited {$fielddispclass_submited}">
+			{$submited_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END submited_fieldblock}
+	{BEGIN sch_id1_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_sch_id1 {$fielddispclass_sch_id1}">
+			<b>Sch Id1</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_sch_id1 {$fielddispclass_sch_id1}">
+			{$sch_id1_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END sch_id1_fieldblock}
+
+
+
+
+<tr  class="runner-row style2 runner-b-viewbuttons {$brickclass_viewbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN prev_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+</span>
+{END prev_button}
+{BEGIN back_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backbutton_attrs}>Back to list</a>
+</span>
+{END back_button}
+{BEGIN next_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+</span>
+{END next_button}
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_fields}
+
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_view}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_view}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>
